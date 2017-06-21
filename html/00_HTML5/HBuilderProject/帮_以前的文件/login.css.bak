@@ -1,0 +1,111 @@
+
+
+.login {
+	position: relative;
+	margin:80px auto ;
+	width: 350px;
+	padding-right: 5px;
+	font-weight: 300;
+	color: #a8a7a8;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.login p {
+	margin: 0 0 15px;
+	text-align: center;
+}
+
+.login-submit {
+	position: relative;
+	top: 50px;
+	left: 138px;
+	width: 60px;
+	height: 60px;
+	padding: 20px;
+	border-radius: 80px;
+	border: 2px red solid;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.login-submit:before,
+.login-submit:after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+}
+
+.login-submit:before {
+	top: 28px;
+	left: -4px;
+	width: 4px;
+	height: 10px;
+	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.login-button {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	width: 100px;
+	height: 100px;
+	/*padding: 0 0 48px;*/
+	text-indent: 120%;
+	white-space: nowrap;
+	overflow: hidden;
+	background: none;
+	border: 0;
+	border-radius: 100px;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.login-button:before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	background: #00a2d3;
+	border-radius: 100px;
+	background-image: -webkit-linear-gradient(top, #00a2d3, #0d7796);
+	background-image: -moz-linear-gradient(top, #00a2d3, #0d7796);
+	background-image: -o-linear-gradient(top, #00a2d3, #0d7796);
+	background-image: linear-gradient(to bottom, #00a2d3, #0d7796);
+	-webkit-box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+	box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+}
+
+.login-button:active:before {
+	background: #0591ba;
+	background-image: -webkit-linear-gradient(top, #0591ba, #00a2d3);
+	background-image: -moz-linear-gradient(top, #0591ba, #00a2d3);
+	background-image: -o-linear-gradient(top, #0591ba, #00a2d3);
+	background-image: linear-gradient(to bottom, #0591ba, #00a2d3);
+}
+
+.login-button:after {
+	text-align: center;
+	margin: 0 auto;
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 38px;
+	width: 50px;
+	height: 40px;
+	background: url("../img/go.png") 0 0 no-repeat;
+}
+
+.forgot-password {
+	position: relative;
+	float: left;
+	top:50px;]
+	padding-left: 50px;
+	font-size: 13px;
+	font-weight: 100px;
+	letter-spacing: 1px;
+}

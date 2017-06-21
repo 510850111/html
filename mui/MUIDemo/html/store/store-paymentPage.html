@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/store/store-paymentPage.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" id="nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">蜀大侠川味火锅</h1>
+		    <button class="mui-pull-right">消费提示</button>
+		</header>
+		<div class="mui-content">
+		    <div id="reminder">
+		    	<div id="reminderInner">
+		    		消费总额：	
+		    		<p class="mui-pull-right">
+		    		<input type="text" placeholder="请与服务员核对金额后支付	">
+		    		</p>
+		    	</div>
+		    </div>
+		    <div class="mui-input-row mui-checkbox" id="checkInfo">
+			<img src="../../icon/wechat.png" />
+			<div id="paymentInfo">
+				<p>微信支付</p>
+				<p>推荐安装微信5.0版本以上的用户使用</p>
+			</div>
+			<input name="checkbox1" type="checkbox" checked>
+			</div>
+		<button id="submitButton">确认买单</button>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+
+</html>

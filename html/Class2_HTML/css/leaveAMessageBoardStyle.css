@@ -1,0 +1,132 @@
+body{
+	text-align: center;
+	background-color: #EDEDED;
+}
+#box{
+	display: inline-block;
+	text-align: center;
+	min-width: 1330px;
+	/*background-color: red;*/
+	/*border-left: solid 1px red;
+	border-right: solid 1px red;
+	border-bottom: solid 1px red;*/
+	border-bottom-right-radius:2em;
+    border-bottom-left-radius:2em;
+	background-color: whitesmoke;
+	box-shadow: #666 0px 0px 10px;
+}
+
+#bgImg{
+	/*width: 100%;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+.leaveAMessageBoardField {
+	width: 50%;
+	margin: 5% auto 3%;
+	/*border: red 1px solid;*/
+	
+
+}
+
+form {
+	padding: 0% 1%;
+	margin-bottom: 200px;
+}
+
+form li.first,
+li.second {
+	border: none;
+	list-style: none;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.icon,
+.icon2 {
+	height: 55px;
+	width: 55px;
+	display: block;
+	float: left;
+	border-top-left-radius: 0.3em;
+	border-border-bottom-left-radius: 0.3em;
+}
+
+.user {
+	background: url(../imges/icons.png) no-repeat 14px 15px #f79d29;
+}
+
+.email {
+	background: url(../imges/icons.png) no-repeat 15px -39px #f79d29;
+}
+
+.phone {
+	background: url(../imges/icons.png) no-repeat 15px -93px #f79d29;
+}
+
+.msg {
+	background: url(../imges/msg.png) no-repeat 16px 16px #f79d29;
+}
+
+li.first:hover .user {
+	background: url(../imges/icons.png) no-repeat 14px 15px #DB2048;
+}
+
+li.first:hover .email {
+	background: url(../imges/icons.png) no-repeat 15px -39px #DB2048;
+}
+
+li.first:hover .phone {
+	background: url(../imges/icons.png) no-repeat 15px -93px #DB2048;
+}
+
+li.second:hover .msg {
+	background: url(../imges/msg.png) no-repeat 16px 16px #DB2048;
+}
+
+input[type="text"],
+input[type="email"],
+form textarea {
+	width: 77%;
+	padding: 1.13em 1em 1.13em 1em;
+	color: #858282;
+	font-size: 16px;
+	outline: none;
+	background: #fff;
+	font-weight: 500;
+	border: none;
+	font-family: '楷体';
+	border-top-right-radius: 0.3em;
+	border-border-bottom-right-radius: 0.3em;
+	/*border: 2px solid #0B6EFF;*/
+	box-shadow: #666 0px 0px 5px
+}
+
+form textarea {
+	resize: none;
+	height: 140px;
+}
+
+.leaveAMessageBoardField input[type="submit"] {
+	font-size: 17px;
+	font-weight: 300;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	padding: 10px 10px;
+	width: 25%;
+	border: 2px solid #F79D29;
+	float: right;
+	background: #F79D29;
+	border-radius: 0.3em;
+	margin-right: 2.85em;
+}
+
+input[type="submit"]:hover {
+	/*transform: rotate(1deg);*/
+	position: relative;
+	top: 1px;
+	background-color: #F00C50;
+	
+}

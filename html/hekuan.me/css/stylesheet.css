@@ -1,0 +1,123 @@
+/*
+* Prototype.css
+* Copyright 2013, John Blazek, TCM, & 1 Trick Pony
+* Contains CSS That is FPO
+* 04/29/2013
+*/
+
+/* Table of Contents
+==================================================
+	
+	
+	#Mix-ins
+
+	#Resets
+	#Prototype Styles*/
+	
+
+
+/* Font Face
+========================================================================== */	
+	
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('../fonts/quicksand_light-webfont.eot');
+    src: url('../fonts/quicksand_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand_light-webfont.woff') format('woff'),
+         url('../fonts/quicksand_light-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand_light-webfont.svg#quicksandlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+		
+		
+/* #Prototype Styles
+================================================== */		
+html, body{ background-color:#1a948d; }	
+
+body
+{ 
+	background-image: url('../images/background.gif');
+	background-repeat: no-repeat;
+	background-position: top center;
+	width:100%;
+	background-size:cover;
+	height:100%;
+	min-height:1000px;
+	overflow:hidden;
+	font-family: 'quicksandlight', Helvetica, Arial;
+	color:#FFFFFF;
+	text-shadow: -1px -1px 4px rgba(0, 0, 0, .99);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+header
+{
+	
+	margin-top:30px;
+	position:absolute;
+	z-index:5;
+	width:420px;
+	padding-top:10px;
+	padding-bottom:10px;
+
+}
+
+h1{
+	
+	font-size:36px;
+	letter-spacing:-2.5px;
+	margin-left:30px;
+}
+
+h3{
+	
+	font-size:16px;
+	letter-spacing:-1.5px;
+	margin-top:5px;
+	margin-left:35px;
+}
+
+#fps
+{
+	margin-top:5px;
+	margin-left:35px;
+}
+
+a
+{
+	color:rgba( 255, 255, 255, .65 );
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:rgba( 255, 255, 255, 1 );
+}

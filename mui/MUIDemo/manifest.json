@@ -1,0 +1,908 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H5E6F29ED",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "MUIDemo",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.0",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "html/login/login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+            "description": "访问加速度感应器"
+        },
+        "Audio": {
+            "description": "访问麦克风"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Camera": {
+            "description": "访问摄像头"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Device": {
+            "description": "访问设备信息"
+        },
+        "Downloader": {
+            "description": "文件下载管理"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "File": {
+            "description": "访问本地文件系统"
+        },
+        "Gallery": {
+            "description": "访问系统相册"
+        },
+        "Geolocation": {
+            "description": "访问位置信息"
+        },
+         "Invocation": {
+            "description": "使用Native.js能力"
+        },
+        "Messaging": {
+            "description": "访问通讯能力"
+        },
+        "Orientation": {
+            "description": "访问方向感应器"
+        },
+        "Proximity": {
+            "description": "访问距离感应器"
+        },
+        "Storage": {
+            "description": "管理应用本地数据"
+        },
+        
+        "Uploader": {
+            "description": "管理文件上传任务"
+        },
+        "Runtime": {
+            "description": "访问运行期环境"
+        },
+        "XMLHttpRequest": {
+            "description": "跨域网络访问"
+        },
+        "Zip": {
+            "description": "文件压缩与解压缩"
+        },
+        "Barcode": {
+            "description": "管理二维码扫描插件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        },
+        "Webview":{
+        	"description": "窗口管理"
+        },
+        "NativeUI":{
+        	"description": "原生UI控件"
+        },
+        "Navigator":{
+        	"description": "浏览器信息"
+        },
+        "NativeObj":{
+        	"description": "原生对象"
+        }
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			},
+			"orientation": ["portrait-primary", "portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": ""
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": ""
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": ""
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": ""
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"html/home.html",
+					"otherPage/register-step1-IdentityVerification.html",
+					"otherPage/regsiter-step3.html",
+					"img/bottom/mine-filled.png",
+					"img/bottom/mine.png",
+					"img/bottom/index-filled.png",
+					"img/bottom/index.png",
+					"img/bottom/store-filled.png",
+					"img/bottom/store.png",
+					"img/bottom/other.png",
+					"img/bottom/other-filled.png"
+				],
+				"refer": [
+					"html/setting.html",
+					"html/message.html",
+					"html/mine.html",
+					"html/other.html",
+					"html/store.html"
+				],
+				"priority": 0
+			},
+			"html/home.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/home.css",
+					"icon/1.svg",
+					"icon/8.svg",
+					"icon/7.svg",
+					"icon/3.svg",
+					"icon/5.svg",
+					"icon/2.svg",
+					"icon/6.svg",
+					"icon/4.svg",
+					"icon/9.svg",
+					"otherPage/store-detail.html",
+					"otherPage/search.html",
+					"icon/icon2.png",
+					"icon/icon4.png",
+					"icon/icon3.png",
+					"icon/icon1.png",
+					"icon/icon5.png",
+					"icon/scan.png",
+					"icon/income.png",
+					"icon/KTV.png",
+					"icon/relax.png",
+					"icon/collect.png",
+					"icon/healthCare.png",
+					"icon/lifeServer.png",
+					"icon/shop.jpg",
+					"icon/all.png",
+					"icon/wedding.png",
+					"icon/bell.png",
+					"icon/education.png",
+					"css/font-awesome.min.css",
+					"icon/food.png",
+					"icon/shareRecommend.png",
+					"icon/digital.png",
+					"icon/collectChoose.png",
+					"icon/incomeTutorial.png"
+				],
+				"refer": [
+					"otherPage/Search.html"
+				],
+				"priority": 0
+			},
+			"html/setting.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/store.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/12.jpg",
+					"icon/location.svg",
+					"css/store.css",
+					"icon/nearMap.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mine.css",
+					"otherPage/mine-str.html",
+					"otherPage/mine-AllBills.html",
+					"otherPage/mine-MyMessages.html",
+					"icon/payment.svg",
+					"icon/person.svg",
+					"icon/noPaying.svg",
+					"icon/comment.svg",
+					"icon/afterSale.svg",
+					"icon/refund.png",
+					"icon/RMB.png",
+					"icon/message.png",
+					"icon/prePayment.png",
+					"icon/paymented.png",
+					"icon/share.png",
+					"icon/comment.png",
+					"icon/noComment.png",
+					"otherPage/mine-MyProfit.html",
+					"icon/collect.png"
+				],
+				"refer": [
+					"html/mine-AllBills.html",
+					"otherPage/mine-MyConsumptionBill.html",
+					"otherPage/mine-MyCollect.html"
+				],
+				"priority": 0
+			},
+			"html/mine-AllBills.html": {
+				"resources": [
+					"css/mine-AllBills.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/mine-AllBills.html": {
+				"resources": [],
+				"refer": [
+					"html/mine.html"
+				],
+				"priority": 0
+			},
+			"otherPage/mine-str.html": {
+				"resources": [
+					"css/mine-str.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"html/mine.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/mine-MyMessages.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"html/mine.html",
+					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/other.html": {
+				"resources": [
+					"icon/incomeVideo.svg",
+					"icon/income.svg",
+					"css/other.css",
+					"icon/store.svg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"icon/calculate.png",
+					"icon/shopSettle.png",
+					"icon/incomeTutorial.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/Search.html": {
+				"resources": [
+					"css/search.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.min.js"
+				],
+				"refer": [
+					"html/home.html"
+				],
+				"priority": 0
+			},
+			"otherPage/store-detail.html": {
+				"resources": [
+					"img/storePic.jpg",
+					"css/store-detail.css",
+					"js/mui.min.js",
+					"icon/person.svg",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"html/home.html",
+					"icon/mappoint_g.png",
+					"icon/back.png",
+					"icon/phone.png"
+				],
+				"refer": [
+					"index.html",
+					"html/mine.html"
+				],
+				"priority": 0
+			},
+			"otherPage/search.html": {
+				"resources": [
+					"css/search.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"index.html"
+				],
+				"refer": [
+					"html/home.html"
+				],
+				"priority": 0
+			},
+			"otherPage/register-step1-IdentityVerification.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/register-step1-identityVerification.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"index.html",
+					"otherPage/regsiter-step3.html",
+					"otherPage/regsiter-step2.html",
+					"otherPage/register-step1.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/register-step1.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/register-step1.css",
+					"otherPage/register-step1-InputPhoneNumber.html",
+					"otherPage/register-step1-IdentityVerification.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/register-step1-InputPhoneNumber.html": {
+				"resources": [
+					"css/register-step1-inputPhoneNumber.css",
+					"otherPage/regsiter-step2.html",
+					"otherPage/register-step1.html"
+				],
+				"refer": [
+					"otherPage/register-step1-IdentityVerification.html"
+				],
+				"priority": 0
+			},
+			"otherPage/regsiter-step3.html": {
+				"resources": [
+					"css/register-step3.css",
+					"otherPage/register-step1-IdentityVerification.html",
+					"otherPage/regsiter-step2.html",
+					"index.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/regsiter-step2.html": {
+				"resources": [
+					"css/register-step2.css",
+					"otherPage/regsiter-step3.html",
+					"otherPage/register-step1-InputPhoneNumber.html",
+					"otherPage/register-step1-IdentityVerification.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/login.js",
+					"css/mui.min.css",
+					"js/deviceInfo.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"otherPage/register-step1.html"
+				],
+				"priority": 0
+			},
+			"otherPage/mine-MyProfit.html": {
+				"resources": [
+					"css/mine-MyProfit.css"
+				],
+				"refer": [
+					"otherPage/mine-MyContributionRange.html"
+				],
+				"priority": 0
+			},
+			"otherPage/mine-MyCommentsPage.html": {
+				"resources": [
+					"css/mine-MyCommentsPage.css",
+					"icon/emptyStar.png",
+					"icon/back.png",
+					"icon/fullStar.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"otherPage/mine-MyConsumptionBill.html": {
+				"resources": [
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"otherPage/mine-MyCommentsPage.html"
+				],
+				"priority": 0
+			},
+			"html/register/register-step1.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"css/register/register-step1.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"icon/arrow.png",
+					"icon/bg_number_g.png",
+					"icon/sweepCode.jpg",
+					"icon/bg_number_orange.png",
+					"css/register/progressbarTableCommon.css"
+				],
+				"refer": [
+					"html/register/register-step1-InputPhoneNumber.html",
+					"html/register/register-step1-IdentityVerification.html"
+				],
+				"priority": 0
+			},
+			"html/login/login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/login.js",
+					"css/mui.min.css",
+					"js/deviceInfo.js",
+					"js/common/deviceInfo.js",
+					"js/lib/bluebird.core.js",
+					"js/login/login.js",
+					"js/lib/authApi.js",
+					"js/lib/xrjAPI.js",
+					"js/lib/MD5Encrypt.js",
+					"js/mui.js",
+					"js/lib/md5.js",
+					"js/lib/aes.js",
+					"js/require.js",
+					"fonts/mui.ttf",
+					"css/login/login.css"
+				],
+				"refer": [
+					"html/register/register-step1.html",
+					"html/home/home.html",
+					"html/index.html"
+				],
+				"priority": 0
+			},
+			"html/register/register-step1-InputPhoneNumber.html": {
+				"resources": [
+					"css/register/register-step1-inputPhoneNumber.css",
+					"js/register/register-step1-InputPhoneNumber.js"
+				],
+				"refer": [
+					"html/register/register-step1-IdentityVerification.html"
+				],
+				"priority": 0
+			},
+			"html/register/regsiter-step2.html": {
+				"resources": [
+					"css/register/register-step2.css"
+				],
+				"refer": [
+					"html/register/regsiter-step3.html"
+				],
+				"priority": 0
+			},
+			"html/register/register-step1-IdentityVerification.html": {
+				"resources": [
+					"css/register/register-step1-identityVerification.css",
+					"js/register/register-step1-IdentityVerification.js",
+					"icon/arrow.png",
+					"icon/bg_number_g.png",
+					"js/lib/bluebird.core.js",
+					"js/lib/authApi.js",
+					"icon/bg_number_orange.png",
+					"js/lib/xrjAPI.js",
+					"fonts/mui.ttf",
+					"js/lib/MD5Encrypt.js",
+					"css/mui.min.css",
+					"js/mui.js",
+					"js/lib/md5.js",
+					"js/require.js"
+				],
+				"refer": [
+					"html/register/regsiter-step2.html",
+					"html/register/register-step2.html"
+				],
+				"priority": 0
+			},
+			"html/register/regsiter-step3.html": {
+				"resources": [
+					"css/register/register-step3.css",
+					"html/index.html"
+				],
+				"refer": [
+					"index.html",
+					"/html/index.html"
+				],
+				"priority": 0
+			},
+			"html/other/other.html": {
+				"resources": [
+					"css/other/other.css",
+					"icon/calculate.png",
+					"icon/shopSettle.png",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"icon/incomeTutorial.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/home/home.html": {
+				"resources": [
+					"icon/scan.png",
+					"icon/income.png",
+					"icon/relax.png",
+					"icon/KTV.png",
+					"icon/incomeTutorial.png",
+					"css/mui.css",
+					"icon/collect.png",
+					"icon/lifeServer.png",
+					"icon/healthCare.png",
+					"icon/shop.jpg",
+					"css/home/home.css",
+					"icon/all.png",
+					"icon/bell.png",
+					"icon/wedding.png",
+					"icon/education.png",
+					"icon/food.png",
+					"icon/shareRecommend.png",
+					"icon/digital.png",
+					"icon/collectChoose.png",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"icon/star_full.png",
+					"icon/star_half.png",
+					"js/home/home.js",
+					"js/lib/bluebird.core.js",
+					"js/lib/md5.js",
+					"js/lib/MD5Encrypt.js",
+					"js/mui.js",
+					"js/lib/authApi.js",
+					"js/lib/xrjAPI.js",
+					"js/require.js"
+				],
+				"refer": [
+					"html/search/search.html",
+					"html/store/store-detail.html",
+					"html/mine/mine-MyMessages.html",
+					"html/mine/mine-MyProfit.html",
+					"html/mine/mine-MyShareCode.html",
+					"html/store/store-paymentPage.html"
+				],
+				"priority": 0
+			},
+			"html/index.html": {
+				"resources": [
+					"html/home/home.html",
+					"img/bottom/mine.png",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"img/bottom/index-filled.png",
+					"css/mui.min.css",
+					"img/bottom/index.png",
+					"img/bottom/store.png",
+					"img/bottom/other.png",
+					"img/bottom/mine-filled.png",
+					"img/bottom/store-filled.png",
+					"img/bottom/other-filled.png"
+				],
+				"refer": [
+					"html/other/other.html",
+					"html/mine/mine.html",
+					"html/store/store.html"
+				],
+				"priority": 0
+			},
+			"html/mine/mine.html": {
+				"resources": [
+					"icon/refund.png",
+					"css/mine/mine.css",
+					"icon/RMB.png",
+					"icon/person.svg",
+					"icon/message.png",
+					"icon/prePayment.png",
+					"icon/paymented.png",
+					"icon/share.png",
+					"icon/comment.png",
+					"icon/noComment.png",
+					"fonts/mui.ttf",
+					"css/mui.css",
+					"icon/collect.png",
+					"js/mui.min.js",
+					"js/lib/bluebird.core.js",
+					"js/lib/authApi.js",
+					"js/lib/md5.js",
+					"js/lib/xrjAPI.js",
+					"js/lib/MD5Encrypt.js",
+					"js/mui.js",
+					"js/mine/mine.js",
+					"js/require.js"
+				],
+				"refer": [
+					"html/mine/mine-MyMessages.html",
+					"html/mine/mine-MyCollect.html",
+					"html/mine/mine-MyProfit.html",
+					"html/mine/mine-MyConsumptionBill.html",
+					"html/mine/mine-MyShareCode.html",
+					"html/mine/mine-AllBills.html"
+				],
+				"priority": 0
+			},
+			"html/search/search.html": {
+				"resources": [
+					"css/search/search.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/store/store.html": {
+				"resources": [
+					"css/store/store.css",
+					"icon/nearMap.png",
+					"js/mui.min.js",
+					"icon/star_full.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/store/store.js",
+					"js/lib/bluebird.core.js",
+					"js/lib/authApi.js",
+					"js/lib/xrjAPI.js",
+					"js/lib/MD5Encrypt.js",
+					"js/mui.js",
+					"js/lib/md5.js",
+					"js/require.js"
+				],
+				"refer": [
+					"html/store/store-paymentPage.html"
+				],
+				"priority": 0
+			},
+			"html/mine/mine-MyProfit.html": {
+				"resources": [
+					"css/mine//mine-MyProfit.css",
+					"icon/person.png",
+					"icon/xcoin.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"html/mine/mine-MyContributionRange.html"
+				],
+				"priority": 0
+			},
+			"html/mine/mine-MyConsumptionBill.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"html/mine/mine-MyCommentsPage.html"
+				],
+				"priority": 0
+			},
+			"html/mine/mine-MyCommentsPage.html": {
+				"resources": [
+					"icon/emptyStar.png",
+					"css/mine//mine-MyCommentsPage.css",
+					"icon/fullStar.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/store/store-detail.html": {
+				"resources": [
+					"css/store/store-detail.css",
+					"icon/mappoint_g.png",
+					"img/storePic.jpg",
+					"icon/back.png",
+					"icon/phone.png",
+					"icon/collect.png",
+					"js/mui.min.js",
+					"icon/person.svg",
+					"icon/star_full.png",
+					"fonts/mui.ttf",
+					"css/mui.css",
+					"icon/star_half.png"
+				],
+				"refer": [
+					"html/store/store-paymentPage.html"
+				],
+				"priority": 0
+			},
+			"html/store/store-paymentPage.html": {
+				"resources": [
+					"icon/wechat.png",
+					"css/store/store-paymentPage.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine/mine-MyCollect.html": {
+				"resources": [
+					"css/mine/mine-MyCollect.css",
+					"js/mui.min.js",
+					"icon/star_full.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"icon/star_half.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine/mine-MyMessages.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine/mine-MyShareCode.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine/mine-AllBills.html": {
+				"resources": [
+					"css/mine/mine-AllBills.css",
+					"fonts/mui.ttf",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mine/mine-str-ChangePassword.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/register/register-step2.html": {
+				"resources": [
+					"js/register/register-step2.js",
+					"css/register/register-step2.css",
+					"icon/arrow.png",
+					"icon/bg_number_g.png",
+					"js/lib/bluebird.core.js",
+					"js/lib/authApi.js",
+					"icon/bg_number_orange.png",
+					"js/lib/xrjAPI.js",
+					"fonts/mui.ttf",
+					"js/lib/MD5Encrypt.js",
+					"css/mui.min.css",
+					"js/mui.js",
+					"js/lib/md5.js",
+					"js/require.js"
+				],
+				"refer": [
+					"html/register/register-step3.html"
+				],
+				"priority": 0
+			},
+			"html/register/register-step3.html": {
+				"resources": [
+					"js/register/register-step3.js",
+					"css/register/register-step3.css",
+					"js/lib/aes.js"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": []
+		}
+	}
+}

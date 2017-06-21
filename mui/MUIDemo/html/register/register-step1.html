@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/register/register-step1.css" />
+		<link rel="stylesheet" href="../../css/register/progressbarTableCommon.css" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a href="../../html/mine.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="gap"></div>
+			<!--<div id="progressbar1" class="mui-progressbar" style="margin-top: 8px;"><span></span></div>-->
+			<table id="progressbarTable" border="0" cellspacing="" cellpadding="" width="100%" style="margin-top: 10px;">
+				<tr>
+					<td class="active">
+					<strong>
+						<img class="circle" src="../../icon/bg_number_orange.png"/>
+						<i>1</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+						<p>推荐人识别&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>2</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>手机验证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>3</i>
+						<br />
+						<p>个人资料&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+				</tr>
+			</table>
+			
+			<div class="mui-content-padded " style="margin-top: 10px; text-align: center;">
+			    <div class="mui-card">
+					<div class="mui-card-header" style="height: 200px;">
+						<img src="../../icon/sweepCode.jpg"/>
+					</div>
+				</div>
+					<a href="register-step1-IdentityVerification.html">
+					<button type="button" data-loading-text="正在启动相机..." class="mui-btn mui-btn-outlined" style="height:50px;width: 82%; margin-top: 20px;">扫描二维码</button>	
+					</a>
+					
+					<a id="InputPhoneNumberBtn" >
+					<button  type="button" data-loading-text="请稍后..." class="mui-btn mui-btn-outlined" style="height:50px;width: 82%; margin-top: 20px;" >
+					推荐人手机号	
+					</button>	
+					</a>
+					
+			</div>
+			
+			
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+//			mui("#progressbar1").progressbar({progress:33.33}).show();//进度条为33.33%
+			
+				var InputPhoneNumberBtn = document.getElementById("InputPhoneNumberBtn");
+				InputPhoneNumberBtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url : 'register-step1-InputPhoneNumber.html',
+						id : 'register-step1-InputPhoneNumber.html'
+						
+					})
+				});
+
+			
+			//按钮的loading效果
+//			mui(document.body).on('tap', '.mui-btn', function(e) {
+//  			mui(this).button('loading');
+//			    setTimeout(function() {
+//			        mui(this).button('reset');
+//			    }.bind(this), 5000);
+//			});
+		</script>
+	</body>
+
+</html>

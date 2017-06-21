@@ -1,0 +1,143 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	line-height: 1.5em;
+	color: #0B6EFF;
+	/*总字体颜色*/
+	background-color: #ededed;
+}
+
+a:link,
+a:visited {
+	color: #060;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	color: #c00;
+	text-decoration: none;
+}
+
+p {
+	text-indent: 2em;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: #38713a;
+	height: 30px;
+	background: url(../imges/箭头2.png) no-repeat;
+	padding: 35px 0px 50px 230px;
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #006600;
+	height: 20px;
+	padding: 7px 20px 20px 0px;
+}
+
+h3 {
+	color: #006600;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+#header {
+	float: left;
+	width: 400px;
+	height: 450px;
+	color: #0b6eff;
+	font-family: 华文琥珀;
+	text-align: justify;
+	font-size: 20px;
+	/*font-size: auto;*/
+	padding: 80px 0px 3px 960px;
+	background: url(../imges/上.jpg) no-repeat;
+}
+
+#header span {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#welcome {
+	float: left;
+	text-align: justify;
+	font-size: 15px;
+	padding: 20px 0px 50px 50px;
+}
+
+#welcome img {
+	float: left;
+	padding: 0px 20px 0px 50px;
+}
+
+.more_button_1 {
+	background: url(../imges/箭头2.png) no-repeat;
+	font-size: 30px;
+	height: 60px;
+	width: 250px;
+	padding: 40px 0px 0px 220px;
+	font-weight: bold;
+}
+
+.more_button_1 a {
+	color: #38713A;
+}
+
+.more_button_1 a:hover {
+	color: deeppink;
+	text-decoration: none;
+}
+
+#box {
+	float: left;
+	width: 1280px;
+	height: 800px;
+	background: url(../imges/底部1.png) no-repeat;
+	padding: 0px 0px 0px 60px;
+}
+
+.box1_right {
+	float: left;
+	width: 560px;
+	font-size: 20px;
+	text-align: justify;
+	padding: 0px 0px 100px 0px;
+}
+
+.box1_right ul {
+	font-size: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.box1_right li {
+	display: inline;
+}
+
+#erweima {
+	float: right;
+	width: 1010px;
+	height: 100px;
+	background: url(../imges/二维码.png) no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+#down {
+	float: right;
+	width: 1350px;
+	height: 30px;
+	color: #FF1493;
+	margin-top: 20px;
+	background: #000000;
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+}

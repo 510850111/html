@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/store/store-detail.css" />
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media" style="height:217px;background-image:url(../../img/storePic.jpg)">
+				<a href="../../index.html"><span id="back" class="mui-action-back mui-icon">
+					<img src="../../icon/back.png" />
+				</span></a>
+				<span id="collect" class="mui-icon mui-pull-right">
+					<img src="../../icon/collect.png" />
+				</span>
+			</div>
+		</div>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="phone-ul">
+				<li class="mui-table-view-cell">
+					<a class="">
+						<!--<img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">-->
+						<span class="mui-pull-right" style="height:50px;width: 20%; ">
+							<div id="phone" onclick="call();" class=" mui-btn mui-btn-outlined" style="height: 100%; width: 100%;"><span>
+								<img src="../../icon/phone.png" />
+							</span></div>
+						</span>
+						<div style="color: #000000;font-size: 16px;font-weight: 700;"> 蜀大侠川味火锅(百花中心店)
+						</div>
+						<div id="score">
+							<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+							<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+							<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+							<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+							<span>
+										<img src="../../icon/star_half.png"/>
+									</span>
+							<span id="trueScore">
+		                   			评分:4.7
+		                   		</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="" onclick="call();">
+						<div id="locate">
+							<span class="mui-icon">
+								<img src="../../icon/mappoint_g.png" />
+							</span>
+							<span style="font-size: 15px;color: gray;position: absolute;top: 12px;left: 35px;">一环路南一段123号附2号 百花中心站旁</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span style="font-size: 18px;color:#979797; line-height:35px ;">买单返利2%</span>
+						<span id="" class="mui-pull-right">
+			               		<button id="paymentInfo" type="button" class="mui-btn mui-btn-warning" style="padding: 8px 20px; border-radius: 5px;background-color:#FF750F; ">买单返利</button>
+			            </span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="info">
+					<p>
+						<strong>8折</strong>
+						(每天10:00 - 11:30)</p>
+					<p>
+						<strong>6折</strong>
+						(六一儿童节 2017年6月1日)</p>
+				</li>
+			</ul>
+
+			<div class="mui-card" style="margin-top: 10px;">
+				<!--页眉，放置标题-->
+				<div class="mui-card-header">商家简介</p>
+				</div>
+				<!--内容区-->
+				<div class="mui-card-content">
+					<p>&nbsp;&nbsp;&nbsp;我们恪守传统手法精髓，将最地道的川味延续下来，菜品确保6小时原则，带给味蕾绝佳的回味。蜀大侠，来成都必须要吃的火锅。</p>
+
+				</div>
+				<!--页脚，放置补充信息或支持的操作-->
+				<!--<div class="mui-card-footer">页脚</div>-->
+			</div>
+
+			<div class="mui-card" style="margin-top: 10px;">
+				<!--页眉，放置标题-->
+				<div class="mui-card-header">评论</div>
+				<!--内容区-->
+				<div class="mui-card-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img style="border-radius: 100px;" class="mui-media-object mui-pull-left" src="../../icon/person.svg">
+								<div class="mui-media-body">
+									<div>
+										<span id="nickname">
+					                		朵朵Anglela 
+					                	</span>
+										<span id="score" class="mui-pull-right">
+					                
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+										<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+										<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+										<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+										<span>
+										<img src="../../icon/star_half.png"/>
+									</span>
+
+										</span>
+										<div id="date">
+											2017-3-16
+										</div>
+									</div>
+									<p class="mui-ellipsis">味道非常棒!已经是第三次来了,这是我在成都吃到的最好吃的火锅!</p>
+								</div>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<!--页脚，放置补充信息或支持的操作-->
+				<!--<div class="mui-card-footer">页脚</div>-->
+			</div>
+
+			<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action ">
+				<!-- 可选择菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#">打电话给 139 1234 5678</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">打电话给 028-4614670</a>
+					</li>
+				</ul>
+				<!-- 取消菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#sheet1"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			function call() {
+				mui('#sheet1').popover('toggle');
+			}
+			
+			mui.plusReady(function(){
+				plus.webview.currentWebview().setStyle({scrollIndicator:'none'});//去除滚动条
+				mui(".mui-table-view").on('tap','#paymentInfo',function(){
+					
+					mui.openWindow({
+						url:'../store/store-paymentPage.html',
+						id:'store-paymentPage'
+					})
+				});
+			});
+		</script>
+	</body>
+
+</html>

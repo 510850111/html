@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/register/register-step1-identityVerification.css" />
+	    <link rel="stylesheet" href="../../css/register/progressbarTableCommon.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="../../html/mine.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">注册</h1>
+		</header>
+		
+		<div class="mui-content">
+		    <!--<div id="progressbar1" class="mui-progressbar" style="margin-top: 8px;"><span></span></div>-->
+			<div class="gap"></div>
+			<table id="progressbarTable" border="0" cellspacing="" cellpadding="" width="100%" style="margin-top: 10px;">
+				<tr>
+					<td class="active"><strong>
+						<img class="circle" src="../../icon/bg_number_orange.png"/>
+						<i>1</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>推荐人识别&nbsp;&nbsp;&nbsp;</p>	
+					
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>2</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>手机验证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>3</i>
+						<br />
+						<p>个人资料&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+				</tr>
+			</table>
+			
+			<div class="mui-content-padded" >
+			    <table  id="table1" border="0px" cellspacing="" cellpadding="" width="100%">
+			    	<tr><th id="th0"><span class="mui-icon mui-icon-contact"></span>推荐人身份认证</th></tr>
+			    	<tr><td><span></span><label>昵称</label>:&nbsp;<span id="nickname"></span></td></tr>
+			    	<tr><td style="border-bottom: 0px;"><span id="phoneNumber"></span><label>手机号</label>:&nbsp;<span id="telNumber"></span></td></tr>
+			    </table>
+			</div>
+			
+			<div id="btn1">
+				<a>
+					<button id="confirmBtn" type="button" class="mui-btn mui-btn-warning"><strong style="font-size: 20px;">确认</strong></button>
+				</a>
+				
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript" src="../../js/require.js" ></script>
+		<script type="text/javascript" src="../../js/register/register-step1-IdentityVerification.js" ></script>
+	</body>
+
+</html>

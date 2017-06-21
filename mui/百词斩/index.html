@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/hui.css" />
+		<link rel="stylesheet" href="index.css" />
+
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<span class="mui-pull-left header-img"><img href="" /></span>
+			<span class=" mui-pull-right mui-icon mui-icon-search header-dict"><span class="header-dict-text"> 词典&nbsp;</span></span>
+		</header>
+
+		<div class="mui-content">
+			<div class="content-Warp1">
+				<div style="padding:20px 10px 0px 10px;">
+					<div class="hui-swipe" id="swipe">
+						<div class="hui-swipe-item">
+							<span class="last-and-remember">
+								<div class="swipe-last-days">剩余<br /><br /><span id="lastDays" class="last-days-data">25</span>天</div>
+								<div class="swipe-today-remember">今天背单词<br/><br /><span id="countsData" class="count-data">125</span>个</div>
+								<br />
+							</span>
+							<span class="College-English-Test-Band-4" ></span>
+						</div>
+						<div class="hui-swipe-item">
+							<span>321asdsadasdsadssadsdadadas</span>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/hui.js"></script>
+	<script src="js/hui-swipe.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		var swipe = new huiSwpie('#swipe');
+		swipe.autoPlay = false;
+		swipe.run();
+		mui.init();
+	</script>
+
+</html>

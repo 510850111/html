@@ -1,0 +1,12 @@
+{
+  "login.html": {
+    "href": "login.html",
+    "resources": [
+      "css/style.css"
+    ],
+    "refer": [
+      "login.html"
+    ],
+    "priority": 0
+  }
+}

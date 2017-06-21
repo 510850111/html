@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<title>demo</title>
+	</head>
+
+	<body>
+
+		<h1 class="welcome">登录界面</h1>
+
+		<div class="container">
+			<!--做一个容器-->
+			<form class="form" novalidate>
+				<!--一个表单,并不对其进行数据验证-->
+				<div class="wrap">
+					<p class="inputBox">
+						<input placeholder="账号/邮箱/手机号" />
+					</p>
+					<hr />
+					<p class="inputBox">
+						<input required type="password" placeholder="请输入密码" />
+					</p>
+				</div>
+			</form>
+			
+			
+			<section class="login_button">
+				<div class="checkbox">
+					<input type="checkbox" />
+					<label></label>
+				</div>
+			</section>
+
+
+			<div id="forgot-password">
+				<a href="forgot-password.html">忘记密码? </a>
+			</div>
+			<div id="reg">
+				<a href="#">注册账号</a>
+			</div>
+			
+		</div>
+	</body>
+</html>

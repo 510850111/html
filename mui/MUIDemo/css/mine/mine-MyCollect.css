@@ -1,0 +1,81 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+}
+.gap{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+}
+.gap1{
+	width: 100%;
+	height: 5px;
+	background: transparent;
+}
+/*title*/
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+.mui-bar .mui-title {
+        left: 40px
+	color: #777;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    content: '\e471';
+    color: #777;
+}
+.mui-title {
+    text-align: left;
+}
+#nav .mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    border: none;
+    padding: 0 12px;
+    font-size: 18px;
+    margin-top: 9px;
+}
+/*猜你喜欢*/
+.guess{
+	width: 100%;
+	height: 28px;
+}
+#guessContent img {
+    border: 0;
+    width: 20px;
+}
+#guessContent .mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
+    left: 7px;
+    top: 31px;
+}
+.guess p{
+	line-height: 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #898989;
+}
+#guessContent .mui-icon{
+	color: #E89A3F;
+}
+#guessContent .mui-table-view-cell .mine-MyCollect-ltem-Title p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #000000;
+    /* font-family: 幼圆; */
+    font-weight: 500;
+}
+#guessContent .mui-table-view-cell>a:not(.mui-btn) {
+    margin: -11px -29px;
+}
+.mine-MyCollect-ltem-Profit{
+   color: #EC850D;
+   font-weight: 600;
+}
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+    color: #09BB07;
+}

@@ -1,0 +1,79 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-width: 200px;
+	font: normal 100%/1.5 "Microsoft YaHei", "Hei", "WenQuanYi Micro Hei", SimHei, tohoma, sabs-serif;
+	color: #333;
+	background-color: #E6E6E6;
+}
+
+
+.welcome {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	margin: 0 auto padding: 20px;
+	font-size: 28px;
+	border-bottom: 2px solid #000000;
+	/*background-color: blue;*/
+}
+
+.goBack {
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	/*background-color: blue;*/
+	border: 1px solid #c5c5c5;
+	border-radius: 5px;
+	background-color: #c4c4c4;
+	/*text-align: center;*/
+}
+
+.goBack a {
+	display: inline-block;
+	text-decoration: none;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	color: lawngreen;
+	text-align: left;
+}
+
+.goBack a b {
+	float: left;
+	font-size: 24px;
+}
+
+.wrap {
+	border: 1px solid #C5C5C5;
+	border-radius: 8px;
+	background-color: #fff;
+	margin: 15px;
+}
+
+.inputBox {
+	display: block;
+	margin: 2px 1em;
+	line-height: 42px;
+	overflow: hidden;
+	/*background-color: red*/
+}
+
+.inputBox input {
+	margin: 0 auto;
+	height: 42px;
+	width: 100%;
+	border: none;
+	float: left;
+	outline: none;
+	font-size: 18px;
+	/*background-color: blue;*/
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UFT-8" />
+<title>无标题文档</title>
+<link href="练习.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+	<body background="beijing.jpg" style="background-repeat:no-repeat">
+		<div id="container">
+		<div id="top">
+			<div id="shouye">
+				<a href="">首页</a>
+			</div>
+			<div id="huodong">
+				<a href="">活动</a>
+			</div>
+			<div id="jishu">
+				<a href="">技术</a>
+			</div>
+			<div id="huanbao">
+				<a href="">环保天地</a>
+			</div>
+		</div>
+		<div id="main">
+			<h1>&nbsp;商城社区</h1>
+			<br />
+			<h3>商城最新活动</h3>
+			<p>2012.05.18<br />
+			第一届笔记本绘画大赛将于5月10日正式拉开帷幕。<br />
+			火速报名中......</p>
+			<br />
+			<hr />
+			<br />
+			<p>2012.05.30<br />
+			商城开业一周年，所有商品九折优惠，敬请关注。<br />
+			一路有你同行・・・</p>
+			<hr />
+		</div>
+		<div id="footer">
+			<h6>电脑商城版权所有，本公司保留最终解释权</h6>
+		</div>
+		<div>
+	</body>
+</html>

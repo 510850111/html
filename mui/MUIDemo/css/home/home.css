@@ -1,0 +1,183 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+}
+.gap{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+}
+.gap1{
+	width: 100%;
+	height: 5px;
+	background: transparent;
+}
+a{
+	color:#777;
+}
+/*nav*/
+
+#nav {
+	width: 100%;
+	background-color:#e89a3f;
+	position: relative;
+	height: 54px;
+}
+
+#nav-icon-location {
+    display: block;
+    /* width: 30px; */
+    height: 20px;
+    color: white;
+    position: absolute;
+    left: 2%;
+    top: 29%;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+#nav-search {
+    position: absolute;
+    left: 17%;
+    opacity: 1;
+    background-color: white;
+    width: 70%;
+    height: 33px;
+    border-radius: 20px;
+    top: 10px;
+}
+#nav-icon-message {
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+    top: 24%;
+    color: white;
+}
+input[type=search] {
+    background-color: rgba(0, 0, 0, 0);
+}
+#nav-icon-message-badge {
+    margin-left: -37%;
+    margin-top: -38%;
+}
+
+/*nav-two*/
+#nav-two{
+	width: 100%;
+	background-color:#e89a3f;
+}
+.mui-grid-view.mui-grid-9 {
+	border-top:none;
+    border-left:none;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+	 padding: 10px 15px 6px 15px;
+     border-right:none;
+     border-bottom: none; 
+}
+#nav-two li{
+    color: #f7f7f7;
+    width: 33.3%;
+	font-weight: 700;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    color: #f7f7f7;
+}
+#functionTen .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    color: black;
+    font-size:13px;
+}
+/*轮播*/
+#slider{
+	background-color: white;
+}
+.mui-grid-view.mui-grid-9 {
+    background-color: white;
+}
+.mui-slider .mui-slider-group .mui-slider-item img {
+   	width: 45px;
+   	height: 45px;
+    /*margin-top: -4px;*/
+}
+.mui-slider-indicator {
+    bottom: 4px;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    width: 20%;
+}
+#functionTen img {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#functionTen div {
+	font-size: 10px;
+}
+#functionTen .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    padding: 5px 0 1px 0;
+    border-right: none;
+    border-bottom: none;
+}
+#functionTen .mui-grid-view.mui-grid-9 .mui-table-view-cell > a:not(.mui-btn) {
+    margin: 0 auto;
+    padding: 10px 1px;
+    width: 50px;
+}
+/*totalnumber*/
+.totalNumber {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    margin-top: 6px;
+}
+.totalNumber p {
+    font-size: 17px;
+    line-height: 260%;
+    position: relative;
+}
+.totalNumber p img {
+    position: absolute;
+    left: 10%;
+    top: 8px;
+    width: 22px;
+}
+.totalNumber p a {
+    position: absolute;
+    left: 14%;
+    top: -2px;
+}
+/*猜你喜欢*/
+.guess{
+	width: 100%;
+	height: 28px;
+}
+#guessContent img {
+    border: 0;
+    width: 20px;
+}
+.guess p{
+	line-height: 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #898989;
+}
+#guessContent .mui-icon{
+	color: #E89A3F;
+}
+#guessContent .mui-table-view-cell .mine-MyCollect-ltem-Title p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #000000;
+    /* font-family: 幼圆; */
+    font-weight: 500;
+}
+.mine-MyCollect-ltem-Profit{
+   color: #EC850D;
+   font-weight: 600;
+}

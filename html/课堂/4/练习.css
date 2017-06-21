@@ -1,0 +1,68 @@
+/* CSS Document */
+
+a:link {
+	color: black
+}
+
+a:visited {
+	color: black
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+a:active {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+#top {
+	height: 20px;
+	width: 250px;
+	float: right;
+	margin: 20px;
+}
+
+#shouye {
+	width: 40px;
+	border-right: solid 1px black;
+	float: left;
+	margin-right: 5px;
+}
+
+#huodong {
+	width: 40px;
+	border-right: solid 1px black;
+	float: left;
+	margin-right: 10px;
+}
+
+#jishu {
+	width: 40px;
+	border-right: solid 1px black;
+	float: left;
+	margin-right: 10px;
+}
+
+#huanbao {
+	float: left;
+	margin-right: 10px;
+}
+
+#main {
+	clear: both;
+	position: absolute;
+	top: 130px;
+	left: 90px;
+}
+
+#footer {
+	position: absolute;
+	top: 850px;
+	left: 800px;
+}

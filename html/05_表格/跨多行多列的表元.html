@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>跨多行多列的表元</title>
+</head>
+
+<body>
+	<table border="1px" frame="box">
+		<tr>
+			<td>这是列1</td>
+			<td>这是列2</td>
+		</tr>
+
+		<tr align="center">
+			<td colspan="2">这是行2</td>
+		</tr>
+	</table>	
+	<br />
+	<table border="1px" align="center" frame="box">
+		<tr>
+			<td rowspan="2" >这是(1,1)</td>
+			<td>这是(1,2)</td>
+		</tr>
+
+		<tr valign="middle">
+			<td rowspan="2">这是(2,1)</td>
+		</tr>
+
+	</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@charset UTF-8;
+
+body{
+	
+	text-align: center;
+	background-color: black;
+}
+
+#span1{
+	width: 420px;
+	height: 420px;
+	text-align: left;
+	background-color: #F1F1F1;
+	display: inline-block;
+}
+
+#input1{
+	width: 280px;
+	height: 30px;
+	font-size: 28px;
+	/*background-color: blue;*/
+}
+
+#btn1{
+	height: 30px;
+	width: 50px;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	
+}
+
+#p1{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 50px;
+	font-weight: bold;
+	display: inline-block;
+	background-color: red;
+}

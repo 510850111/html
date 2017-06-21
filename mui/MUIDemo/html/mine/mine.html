@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mine/mine.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<!--个人资料-->
+			<ul class="mui-table-view mine-nickname-ul">
+				<li class="mui-table-view-cell mui-media">
+					<a id="mineStr">
+						<img class="mui-pull-left" src="../../icon/person.svg" width="67px" height="67px">
+						<div class="mui-media-body mine-nickname-body ">
+							<div id="nickname" class="mine-nickname-body-nickname">DonaldTrump</div>
+							<p class="mui-ellipsis  mine-nickname-body-instr">个人资料 ></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<!--全部消费账单-->
+			<ul class="mui-table-view TotalBilConsumption-ul ">
+				<li class="mui-table-view-cell">
+					<a id="mineAllBills" class="mui-navigate-right TotalBilConsumption ">
+						<p class="mui-pull-left">我的订单</p>
+						<p class="mui-pull-right" id="allBilConsumption">全部订单</p>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="TotalBilConsumption-ulTwo">
+				<li id="pendingPayment" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" >
+					<a>
+						<span>
+							<img src="../../icon/prePayment.png"/>
+						</span>
+						<div class="mui-media-body">待付款</div>
+					</a>
+				</li>
+				<li id="hasPayment" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<span>
+							<!--<span class="mui-badge mui-badge-red">5</span>-->
+							<img src="../../icon/paymented.png" />
+							
+						</span>
+						<div class="mui-media-body">已付款</div>
+					</a>
+				</li>
+				<li id="waittingForEvaluate" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<span>
+							<img src="../../icon/noComment.png" />
+						</span>
+						<div class="mui-media-body">待评价</div>
+					</a>
+				</li>
+				<li id="refoundAndAfterSales" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<span>
+							<img src="../../icon/refund.png" />
+						</span>
+						<div class="mui-media-body">退款/售后</div>
+					</a>
+				</li>
+			</ul>
+
+			<!--列表-->
+			<ul class="mui-table-view mine-list" style="margin-top: 8px;" id="mine-ul">
+				<li class="mui-table-view-cell" id="myMessage">
+					<a>
+						<span>
+							<img src="../../icon/message.png"/>
+						</span> 
+						  我的消息
+						<span id="mine-MyMessages-MessageCount">
+									<span class="mui-badge mui-badge-red mui-pull-right" >1</span>
+						</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell " id="myCollect">
+					<a>
+						<span>
+							<img src="../../icon/collect.png" />
+						</span> 我的收藏
+					</a>
+				</li>
+				<li class="mui-table-view-cell " id="myProfit">
+					<a>
+						<span>
+							<img src="../../icon/RMB.png" />
+						</span> 我的收益
+					</a>
+				</li>
+				<li class="mui-table-view-cell " id="recommendationCode">
+					<a>
+						<span>
+							<img src="../../icon/share.png" />
+						</span> 我的推荐码
+					</a>
+				</li>
+				<li class="mui-table-view-cell ">
+					<a>
+						<span>
+							<img src="../../icon/comment.png" />
+						</span> 我的留言
+					</a>
+				</li>
+
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/require.js" ></script>
+		<script type="text/javascript" src="../../js/mine/mine.js" ></script>
+	</body>
+
+</html>

@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:"微软雅黑";
+    font-size: 20px;
+}
+#wrap{
+    margin: auto;
+    width: 1366px;
+    clear: both;
+}
+
+#header{
+    height:50px;
+    width:1366px;
+    background:#6cf;
+    margin-bottom: 2px;
+    clear: both;
+}
+#photo{
+    width: 1366px;
+    height: 580px;
+    clear: both;
+}
+#about_us{
+    width: 1366px;
+    height:400px;
+    margin-bottom: 2px;
+    clear: both;
+}
+#top1{
+    width: 1366px;
+    height: 50px;
+    font-size:36px;
+    color: #FF1493;
+    font-family: 宋体;
+    clear: both;
+}
+#Box1{
+    float:left;
+    width: 632px;
+    height:550px;
+    background-image: url("");
+}
+#us{
+    padding: 150px 100px 100px 100px;
+}
+#Box2{
+    float:right;
+    width: 734px;
+    height:550px;
+}
+#activity{
+    width: 1366px;
+    height: 700px;
+    clear: both;
+}
+#top2{
+    width: 1366px;
+    height: 50px;
+    font-size:36px;
+    color: darkblue;
+    font-family: 宋体;
+    clear: both;
+}
+#Box4{
+    float:left;
+    width: 764px;
+    height:620px;
+}
+#Box5{
+    margin-bottom:25px;
+    float:right;
+    width: 600px;
+    height:310px;
+}
+#Box6{
+    float:right;
+    width: 600px;
+    height:310px;
+}
+#our_tether{
+    width: 1366px;
+    height: 500px;
+}
+#top3{
+    width:1366px;
+    height: 50px;
+    font-family: 宋体;
+    font-size: 36px;
+    clear: both;
+}
+#t1{
+    width: 273px;
+    height: 450px;
+}
+#t2{
+    width: 273px;
+    height: 450px;
+}
+#t3{
+    width: 273px;
+    height: 450px;
+}
+#t4{
+    width: 273px;
+    height: 450px;
+}
+#t5{
+    width: 273px;
+    height: 450px;
+}
+#all_photo{
+    width: 1366px;
+    height: 970px;
+}
+#top4{
+    width: 1366px;
+    height: 50px;
+    color: #F00C50;
+    font-size: 36px;
+    font-family: 宋体;
+
+    clear: both;
+}
+#footer{
+    width: 1366px;
+    height: 50px;
+    font-family: "宋体", arial;
+    font-size: 20px;
+    clear: both;
+}

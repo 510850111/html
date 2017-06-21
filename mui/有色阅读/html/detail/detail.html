@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/hui.css" />
+		<style type="text/css">
+			ul {
+				background-color: none;
+			}
+			
+			li {
+				color: #FFFFFF;
+			}
+			
+			#download {
+				width: 100%;
+				text-align: center;
+				height: 50px;
+				line-height: 35px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav redBg">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<div id="title" class="mui-title">等待加载......</div>
+			<span id="showASideBar" class="mui-icon mui-icon-bars mui-pull-right" style="color: #FFFFFF;"></span>
+		</header>
+
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable" style="margin-top: 44px;">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 菜单容器 -->
+				<aside class="mui-off-canvas-right">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll" style="width: 100%;">
+							<ul id="asideUL" class="mui-table-view" style="background:none">
+								<li class="mui-table-view-cell" style="background-color: #F03844;">
+									<a id="download">点击下载</a>
+								</li>
+							</ul>
+							<ul id="chapter" class="mui-table-view" style="background:none"></ul>
+						</div>
+					</div>
+				</aside>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+
+						<div class="mui-content-padded">
+							<div style="text-align: center; width: 100%;">作品简介</div>
+							<div id="instr"></div>
+							<div id="text"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mybodyHidden" style="display: none;"></div>
+
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/h.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			var downloadLink; //下载链接
+
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				var url = self.url;
+				getData(url);
+
+				//点击下载的事件
+				var download = document.getElementById("download");
+				download.addEventListener('tap', function() {
+					downloadFile();
+				})
+
+				function getData(url) {
+					mui.toast('开始尝试获取数据......');
+					mui.ajax(
+						url, {
+							type: 'GET',
+							success: function(data) {
+								//加载获取的页面
+								h('#mybodyHidden').html(data);
+
+								//获得标题
+								document.getElementById('title').innerHTML = document.getElementsByClassName('t')[0].innerHTML;
+
+								//获得作品介绍
+								document.getElementById('instr').innerHTML = document.getElementsByTagName('section')[0].innerHTML;
+
+								//获取侧页的部分目录
+								var cidUrl = document.getElementsByClassName('chapter_page')[0].getElementsByTagName('a');
+								getMenu(cidUrl[cidUrl.length - 1].href);
+
+								//获取下载地址
+								downloadLink = document.getElementsByClassName("xz")[0].href;
+								console.log('下载链接' + downloadLink);
+
+								//下载文件
+								//								downloadFile('webView');
+
+								//丢弃缓存
+								document.getElementById('mybodyHidden').innerHTML = '';
+
+							}
+						}
+					);
+				}
+
+				function downloadFile() {
+					plus.webview.create(downloadLink);
+					mui.toast('文件已经开始下载');
+
+					//关闭侧滑菜单
+					mui('.mui-off-canvas-wrap').offCanvas('show');
+
+				}
+
+				function getMenu(cidUrl) {
+					console.log('目录链接:' + cidUrl);
+					mui.ajax(
+						cidUrl, {
+							type: 'GET',
+							success: function(data) {
+								//判断缓存是否清空
+								while(document.getElementById('mybodyHidden').innerHTML != '');
+								document.getElementById('mybodyHidden').innerHTML = data;
+
+								//拿到章节
+								var chapter_page = document.getElementsByClassName("chapter_page")[0].getElementsByTagName("ul")[0];
+								var linkhref = chapter_page.getElementsByTagName('a');
+
+								//整合章节
+								var chapterStr = '';
+								var chapterHref = {}; //保存章节链接
+								for(var i = 0; i < linkhref.length; i++) {
+									chapterHref[i] = linkhref[i].href;
+									var params = 'openChapter('+chapterHref[i]+')';
+									chapterStr +=
+										'<li class="mui-table-view-cell">' +
+										'<a href = "javascript:' + params + ';">'+
+										linkhref[i].innerHTML +
+										' </a>' +
+										' </li>';
+								}
+
+								//插入页面
+								var chapter = document.getElementById("chapter");
+								chapter.innerHTML = chapterStr;
+								mui.toast('目录加载完毕');
+
+								//清空缓存
+								chapterStr = '';
+								data = '';
+
+							}
+						}
+					);
+				}
+
+				function openChapter(url) {
+					console.log('点击的链接:' + url);
+				}
+
+				var showASideBar = document.getElementById("showASideBar");
+				showASideBar.addEventListener('tap', function() {
+					mui('.mui-off-canvas-wrap').offCanvas('show');
+				})
+
+			});
+		</script>
+	</body>
+
+</html>

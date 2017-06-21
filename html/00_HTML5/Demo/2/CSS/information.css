@@ -1,0 +1,56 @@
+@charset "utf-8";
+#headline {
+	width: 100%;
+	min-width: 1263px;
+	height: 300px;
+	background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("../img/headline.jpg") no-repeat center;
+	position: relative;
+}
+
+#headline hgroup {
+	display: block;
+	width: 1263px;
+	height: 280px;
+	margin: 0 auto;
+	padding: 10px 0 0 30px;
+	left: 50px;
+	top: 550px;
+}
+
+#headline hgroup h2 {
+	font-size: 36px;
+	color: #fff;
+}
+
+#headline hgroup h3 {
+	font-size: 20px;
+	color: #fff;
+	top: 100px;
+	left: 100px;
+}
+
+#contianer {
+	width: 1263px;
+	height: 1200px;
+	margin: 30px auto;
+}
+
+#contianer .side_bar {
+	height: 1200px;
+	width: 320px;
+	float: right;
+}
+
+#contianer .side_bar  .side_bar_box  div {
+	border: #eee solid 4px;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	height: 30px;
+}
+
+#contianer .list {
+	height: 1200px;
+	width: 900px;
+	background-color: #eee;
+	float: left;
+}

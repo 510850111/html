@@ -1,0 +1,175 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+/*global*/
+body{
+	font-family: "微软雅黑";
+}
+.gap{
+	width: 100%;
+	height: 30px;
+	background: transparent;
+}
+.gap1{
+	width: 100%;
+	height: 5px;
+	background: transparent;
+}
+a{
+	outline: none;
+	text-decoration: none;
+	color: black;
+}
+input[type=search] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*nav*/
+
+#nav {
+	width: 100%;
+	background-color:#e89a3f;
+	position: relative;
+	height: 54px;
+}
+#nav-icon-location {
+    width: 13%;
+    height: 30px;
+    position: absolute;
+    left: 34%;
+    display: block;
+    /* width: 30px; */
+    height: 30px;
+    color: white;
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    font-size: 18px;
+}
+#nav-search {
+    position: absolute;
+    left: 16%;
+    opacity: 1;
+    background-color: white;
+    width: 73%;
+    height: 33px;
+    border-radius: 20px;
+    top: 14%;
+}
+
+#nav-icon-message {
+	position: absolute;
+	right:1%;
+	    top: 14%;
+	color: white;
+}
+#nav-icon-message img{
+	width: 100%;
+	height: 100%;
+}
+input[type=search] {
+    background-color: rgba(0, 0, 0, 0);
+}
+/*button*/
+.mui-content{
+	background-color: white;
+}
+#button .mui-btn, button, input[type=button], input[type=reset], input[type=submit]{
+	border: none;
+}
+.mui-row>[class*=mui-col-] {
+    float: left;
+    width: 33.3%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    font-size: 15px;
+    color: #333;
+}
+/*弹出菜单*/
+.mui-popover {
+    width: 100%;
+}
+.mui-popover .mui-table-view {
+    background-color: white;
+}
+.mui-popover .mui-table-view {
+     max-height: auto; 
+}
+#allCategory .mui-table-view-cell>a:not(.mui-btn) {
+    margin: -26px -6px;
+}
+#allCategory .mui-popover .mui-table-view {
+    max-height: 416px;
+}
+#near100m .mui-table-view-cell>a:not(.mui-btn) {
+    margin: -26px -6px;
+}
+#near100m .mui-popover .mui-table-view {
+    max-height: 416px;
+}
+#intelligentSort .mui-table-view-cell>a:not(.mui-btn) {
+    margin: -26px -6px;
+}
+#intelligentSort .mui-popover .mui-table-view {
+    max-height: 416px;
+}
+#allCategoryUl{
+	position: absolute;
+    width: 100%;
+	top: 54px;
+	opacity: 0.95;
+}
+.mui-table-view-cell .choose{
+	color:#e89a3f ;
+/*	border-bottom-color: #e89a3f;*/
+}
+#allCategoryUl .mui-table-view-cell label{
+	font-size: 14px;
+}
+#allCategoryUl .mui-table-view-cell:first-child:after {
+    background-color:#e89a3f;
+}
+.mui-table-view-cell:last-child:after, .mui-table-view-cell:last-child:before {
+    height: 1px;
+    width: 100%;
+}
+/*弹出时的mask*/
+.mui-backdrop {
+     background-color: rgba(0, 0, 0, 0); 
+}
+.mui-popover .mui-popover-arrow:after {
+    background: transparent;
+}/*猜你喜欢*/
+.guess{
+	width: 100%;
+	height: 28px;
+}
+img {
+    border: 0;
+    width: 20px;
+}
+.guess p{
+	line-height: 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #898989;
+}
+#guessContent .mui-icon{
+	color: #E89A3F;
+}
+#guessContent .mui-table-view-cell .mine-MyCollect-ltem-Title p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #000000;
+    /* font-family: 幼圆; */
+    font-weight: 500;
+}
+.mine-MyCollect-ltem-Profit{
+   color: #EC850D;
+   font-weight: 600;
+}

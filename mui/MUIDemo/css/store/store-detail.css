@@ -1,0 +1,84 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+}
+/*shop detail*/
+.mui-content>.mui-table-view:first-child {
+    margin-top: 0px;
+}
+#trueScore {
+    color: #696969;
+    font-size: 16px;
+    position: absolute;
+    top: 36px;
+    left: 135px;
+}
+#score{
+ margin-top: 7px;
+}
+#score img{
+	border: 0;
+    width: 19px;
+}
+.mui-btn .mui-icon {
+    font-size: -webkit-xxx-large;
+    margin-top: -5px;
+}
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    border: 1px solid white;
+}
+.mui-icon {
+    color: #E89A3F;
+}
+#locate .mui-icon{
+	color:#818181 ;
+}
+.mui-table-view-cell:after {
+    left: 0px;
+}
+.mui-card-header {
+    font-size: 16px;
+    border-radius: 2px 2px 0 0;
+    color: #696969;
+}
+#info strong {
+    font-weight: normal;
+    color: #FF750F;
+    font-size: 18px;
+}
+/**/
+#back,
+#collect {
+	height: 35px;
+	width: 35px;
+	background-color: white;
+	color: gray;
+	opacity: 0.5;
+	border-radius: 100px;
+	line-height: 35px;
+	padding-left: 5px;
+}
+
+.mui-card {
+	margin: 0px;
+	padding: 0px;
+}
+#phone img{
+	    width: 36px;
+}
+#collect img{
+    border: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+#back img{
+	border: 0;
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}

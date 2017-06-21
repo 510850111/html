@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <div class="" style="width: 90%;margin: 0 auto;padding-top: 38px;">
+		    	<textarea id="keywords" style="width: 100%; height: 128px;" placeholder="请输入要翻译的文本"></textarea>
+		    </div>
+		    <div class="" style="width: 90%;margin: 0 auto; padding-top: 5px;">
+		    	<button id="submitBtn" type="button" class="mui-btn mui-btn-green" style="width: 100%;height: 50px;">开始翻译</button>
+		    </div>
+		    <div id="resShow" style="width: 90%;margin: 0 auto;padding-top: 20px;">
+		    	<p style="line-height: 1.8em;background-color: #F7F7F7;border-radius: 3px; padding: 5px;"></p>
+		    </div>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/h.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var _index, _self, _next, _prev;
+			mui.ready(function(){
+				h('#submitBtn').tap(function(){
+//					console.log("点击事件");
+					var keywords = h('#keywords').val();
+					if(keywords.length < 1){mui.toast("请输入要翻译的文本");return;}
+					//获取数据
+					//http://fanyi.youdao.com/openapi.do?keyfrom=youdaoDemoHekuanMe&key=40957950&type=data&doctype=json&version=1.1&q=要翻译的文本
+					mui.getJSON(
+						'http://fanyi.youdao.com/openapi.do?keyfrom=youdaoDemoHekuanMe&key=40957950&type=data&doctype=json&version=1.1&q=' + keywords,
+						function(data){
+//							console.log(JSON.stringify(data));
+							h('#resShow').find('p').html(data.translation);
+						}
+					)
+				})
+			});
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_next = plus.webview.getWebviewById('sub3.html');
+				_index = plus.webview.getLaunchWebview(); //获取入口页
+				_prev = plus.webview.getWebviewById('sub1.html');
+				
+				//向左滑动
+				_self.drag({
+					direction: 'left',
+					moveMode: 'followFinger'
+				}, {
+					view: _next,
+					moveMode: 'follow'
+				}, function(e) {
+					if(e.type == 'end' && e.result) {
+						_index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav3").addClass("mui-active")'); //取消所有导航栏被选中的状态,增加第三个导航被选中
+					}
+				});
+				
+				//向右滑动
+				_self.drag({
+					direction: 'right',
+					moveMode: 'followFinger'
+				}, {
+					view: _prev,
+					moveMode: 'follow'
+				}, function(e) {
+					if(e.type == 'end' && e.result) {
+						_index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav1").addClass("mui-active")'); //取消所有导航栏被选中的状态,增加第一个导航被选中
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

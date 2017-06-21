@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hBg">
+			<h1 class="mui-title title">有色阅读</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab" id="navFooter">
+			<a class="mui-tab-item mui-active" id="nav1">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" id="nav2">
+				<span class="mui-icon mui-icon-list"></span>
+				<span class="mui-tab-label">推荐</span>
+			</a>
+			<a class="mui-tab-item" id="nav3">
+				<span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>
+				<span class="mui-tab-label">最新</span>
+			</a>
+
+		</nav>
+
+		<script src="js/mui.js"></script>
+		<script type="text/javascript" src="js/h.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				subpages: [{
+						url: 'html/main/sub1.html',
+						id: 'sub1.html',
+						styles: { top: '44px', bottom: '44px', width: '100%', left: '0%' }
+					},
+					{
+						url: 'html/main/sub2.html',
+						id: 'sub2.html',
+						styles: { top: '44px', bottom: '44px', width: '100%', left: '100%' }
+					},
+					{
+						url: 'html/main/sub3.html',
+						id: 'sub3.html',
+						styles: { top: '44px', bottom: '44px', width: '100%', left: '200%' }
+					}
+					
+				]
+			});
+			//点击事件绑定
+			h('#nav1').tap(function() { 
+				var sub1 = plus.webview.getWebviewById('sub1.html');
+
+				changeSub(1); 
+			});
+			h('#nav2').tap(function() { changeSub(2); });
+			h('#nav3').tap(function() { changeSub(3); });
+
+
+			//更改页面
+			function changeSub(index) {
+				//拿到四个页面
+				var sub1 = plus.webview.getWebviewById('sub1.html');
+				var sub2 = plus.webview.getWebviewById('sub2.html');
+				var sub3 = plus.webview.getWebviewById('sub3.html');
+				//通过改变sub页面的left值进而改变显示页面.
+				sub1.setStyle({ left: (1 - index) * 100 + '%' });
+				sub2.setStyle({ left: (2 - index) * 100 + '%' });
+				sub3.setStyle({ left: (3 - index) * 100 + '%' });
+			}
+
+			
+		</script>
+	</body>
+
+</html>'

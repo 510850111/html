@@ -1,0 +1,41 @@
+ul{
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	width:250px;
+	border-bottom:1px solid #999;
+	font-size:24px;
+	text-align:center;
+	/*background-color: red;*/
+}
+	
+ul li{
+	position:relative;
+}	
+
+li ul{
+	position:absolute;
+	left:261px;
+	top:0;
+	display:none
+}
+
+ul li a{
+	width:250px;
+	display:block;
+	text-decoration:none;
+	color:#666666;
+	background:#fff;
+	padding:5px;
+	border:1px solid #ccc;
+	border-bottom:0px;
+}
+
+ul li a:hover{
+	background-color:blue;
+	color:#fff;
+}
+
+li:hover ul,li.over ul{
+	display:block;
+}

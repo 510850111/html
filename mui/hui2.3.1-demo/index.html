@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>HUI </title>
+		<link rel="stylesheet" type="text/css" href="css/hui.css" />
+	</head>
+
+	<body>
+		<header class="hui-header">
+			<div id="hui-back"></div>
+			<h1>HUI </h1>
+			<div id="hui-header-menu"></div>
+		</header>
+
+		<!--内容区域-->
+		<div class="hui-wrap">
+			<button type="button" class="hui-button hui-danger hui-button-large " id="submit1">hui-button-large</button>
+			<button type="button" class="hui-button hui-primary hui-button-small" id="button1">hui-button-small</button>
+			<button type="button" class="hui-button hui-button-large" id='button2'>提示框</button>
+
+			<div class="hui-switch" id="switchBox">
+				<span>关闭</span>
+				<div class="hui-switch-in"></div>
+			</div>
+
+			<!--多功能菜单-->
+			<button type="button" class="hui-button hui-button-large" id="button3">打开ActionSheet</button>
+			
+			<!--数字框-->
+			<div class="hui-number-box" min = '1' max = '100'>
+				<div class="reduce">-</div>
+				<input type="number" value="1" />
+				<div class="add">+</div>
+			</div>
+			
+			<!--进度条-->
+			<div class="hui-progress" id="progress1">
+				<span></span>
+				<div class="hui-progressing"></div>
+			</div>
+			
+			<!--滑块-->
+			<div class="hui-range">
+				<input type="range" name="" id="range1" max="100" value="20" />
+				<span id="showValue"></span>
+			</div>
+		</div>
+
+		<!--footer-->
+		<div id="hui-footer">
+			<a href="javascript:hui.toast('首页');" id="nav-home">
+				<div class="hui-footer-icons hui-icons-home"></div>
+				<div class="hui-footer-text">首页</div>
+			</a>
+			<a href="javascript:hui.toast('A');" id="nav-A">
+				<div class="hui-footer-icons hui-icons-check"></div>
+				<div class="hui-footer-text">A</div>
+			</a>
+			<a href="javascript:hui.toast('B');" id="nav-B">
+				<div class="hui-footer-icons hui-icons-clear"></div>
+				<div class="hui-footer-text">B</div>
+			</a>
+			<a href="javascript:hui.toast('C');" id="nav-C">
+				<div class="hui-footer-icons hui-icons-click"></div>
+				<div class="hui-footer-text">C</div>
+			</a>
+			<a href="javascript:hui.toast('D');" id="nav-D">
+				<div class="hui-footer-icons hui-icons-clone"></div>
+				<div class="hui-footer-text">D</div>
+			</a>
+
+		</div>
+
+		<script type="text/javascript" src="js/hui.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			var menus = ['我的订单', '我的消息', '我的收藏', '退出登录'];
+			var cancel = '关闭菜单';
+			hui('#hui-header-menu').click(function() {
+				hui.actionSheet(menus, cancel, function() {
+					console.log(e.index);
+
+				});
+			});
+
+			hui('#nav-A').pointMsg('99+');
+
+			//	提交
+			hui('#submit1').click(function() {
+				var res = hui('#submit1').buttonIsLoading();
+				if(res) {
+					hui.toast('正在提交');
+					return;
+				}
+				hui('#submit1').loadingButton('提交中......');
+				setTimeout(function() {
+					hui('#submit1').resetLoadingButton();
+					hui.toast('提交完成');
+				}, 2000);
+			});
+
+			//	提示框
+			hui('#button1').click(function() {
+				hui.iconToast('hi...', 'check');
+				hui.upToast('upToast');
+			});
+
+			//	警告框
+			hui('#button2').click(function() {
+				//		hui.alert('hi','知道了',function(){
+				//			console.log("hui.alert");
+				//		});
+				//		hui.confirm('确定?',['A','B'],function(){
+				//			console.log('hui.confirm:B');
+				//		});
+
+				hui.prompt('请输入您的姓名', ['取消', '确定'], function(val) {
+					console.log('hui.promt,val=' + val);
+				});
+
+			});
+			//	switch
+			hui('#switchBox').switchBox(['OFF', 'ON'], function() {
+				var booleanRes = hui('#switchBox').getSwitchVal();
+				if(booleanRes) {
+					console.log('开关打开');
+				} else {
+					console.log('开关关闭');
+				};
+			});
+
+			//	loading
+			hui.loading('正在加载');
+			setTimeout(function() {
+				hui.closeLoading();
+				hui.iconToast('模拟加载完毕');
+			}, 3000);
+
+			//	ActionSheet
+			var actMenus = ['拍照','从相册中选择'];
+			var actCancel = '取消';
+			hui('#button3').click(function(){
+				hui.actionSheet(actMenus,actCancel,function(e){
+					console.log(e.index);
+				})
+			});
+			
+			//number box
+			hui.numberBox();
+			
+			//进度条
+			hui('#progress1').progressBar(60);
+			
+			//滑块
+			hui('#range1').ranging(function(value){
+				hui('#showValue').html(value);
+			});
+			
+			
+			
+		</script>
+	</body>
+
+</html>

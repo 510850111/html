@@ -1,0 +1,111 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	/*background-color: white;*/
+}
+a{
+	color: white;
+}
+.gap{
+	width: 100%;
+	height: 20px;
+	background:#EFEFF4;
+}
+.gap1{
+	width: 100%;
+	height: 15px;
+	background:white;
+}
+.mui-content{
+	background-color: white;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+/*title*/
+
+.mui-bar .mui-title {
+	color: #696969;
+}
+
+.mui-icon-back:before,
+.mui-icon-left-nav:before {
+	color: #6A6A6A;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+
+/*progress bar*/
+
+.mui-progressbar span {
+    background-color: #E89A3F;
+}
+b, strong {
+    font-weight: normal;
+    display: inline-block;
+    text-align: left;
+}
+#progressbarTable td, th {
+    padding: 0;
+    color: #696969;
+}
+#progressbarTable {
+	border-bottom:1px solid #CCCCCC ;
+	background-color: white;
+}
+#progressbarTable .active p{
+	color:#E89A3F;
+}
+#progressbar1 td{
+	position: relative;
+}
+#progressbarTable .circle{
+	position: absolute;
+	margin-left: 38px;
+}
+#progressbarTable .line{
+	position: absolute;
+    margin-left: 70px;
+    margin-top: 8px;
+    width: 24%;
+}
+#progressbarTable i{
+	position: absolute;
+    font-style: normal;
+    color: white;
+    margin-left: 45px;
+}
+#progressbarTable p{
+    font-size: 15px;
+    margin-bottom: 19px;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+/*refundsInfo*/
+#refundsInfo {
+    padding: 10px 10px 1px 22px;
+}
+/*button*/
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+	margin-top: 15px;
+    width: 86%;
+    margin-left: 7%;
+    height: 47px;
+    font-size: 16px;
+    line-height: 50%;
+    color: white;
+    border: 1px solid #e89a3f;
+    background-color: #E89A3F;
+}

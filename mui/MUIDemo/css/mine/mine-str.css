@@ -1,0 +1,26 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.HeadPortrait-li{
+	
+}
+
+.mine-str-HeadPortrait-li img{
+border-radius: 100px;
+	
+}
+
+.mine-str-HeadPortrait-body{
+	
+}
+
+.mine-str-HeadPortrait{
+	padding:8px 0;
+}
+#headImg {
+	border-radius: 40px;
+	height: 40px;
+	width: 40px;
+}

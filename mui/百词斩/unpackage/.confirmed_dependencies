@@ -1,0 +1,13 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"index.css",
+			"fonts/mui.ttf",
+			"css/hui.css",
+			"js/hui.js",
+			"js/hui-swipe.js"
+		]
+	}
+}

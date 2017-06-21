@@ -1,0 +1,16 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+p{
+	color: black;
+}
+
+.mui-collapse-content{
+	margin: 0px;
+	padding: 0px;
+	border-bottom: #777777 solid 1px;
+}
+
+

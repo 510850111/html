@@ -1,0 +1,133 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	background-color: white;
+}
+a{
+	color: white;
+}
+.gap{
+	width: 100%;
+	height: 20px;
+	background: transparent;
+}
+.mui-content{
+	background-color: white;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+/*title*/
+
+.mui-bar .mui-title {
+	color: #696969;
+}
+
+.mui-icon-back:before,
+.mui-icon-left-nav:before {
+	color: #6A6A6A;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+
+
+/*输入框*/
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+	line-height: 21px;
+	width: 81%;
+	height: 49px;
+	margin-bottom: 16px;
+	padding: 10px 15px;
+	-webkit-user-select: text;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 8px;
+	outline: 0;
+	background-color: #fff;
+	-webkit-appearance: none;
+}
+
+.mui-btn,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	width: 81%;
+	height: 49px;
+	border: 1px solid #E89A3F;
+	border-radius: 8px;
+	background-color: #E89A3F;
+	color: white;
+}
+
+
+/*协议 besure*/
+
+#besure {
+    width: 284px;
+    margin: 0 auto;
+    color: #696969;
+    position: relative;
+}
+.mui-checkbox input[type=checkbox]:checked:before{
+	color: #09BB07;
+}
+#besureInput {
+    display: inline-block;
+    float: left;
+    margin-left: 0px;
+}
+#besureLabel {
+    margin: 10px auto;
+    font-size: 17px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    color: #8f8f94;
+    margin-left: 29px;
+    display: inline-block;
+    float: left;
+}
+.mui-input-group {
+    background-color: transparent;
+}
+.mui-input-group:before {
+    background-color: transparent;
+}
+.mui-input-group:after {
+    background-color: transparent;
+}
+.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
+    left: 20px;
+    top: 14px;
+}
+.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio] {
+    left: 0;
+    top: 14px;
+}

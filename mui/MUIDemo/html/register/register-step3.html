@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/register/register-step3.css" />
+		<link rel="stylesheet" href="../../css/register/progressbarTableCommon.css" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+
+		<div class="mui-content">
+			<!--<div id="progressbar1" class="mui-progressbar" style="margin-top: 8px;"><span></span></div>-->
+			<div class="gap"></div>
+			<table id="progressbarTable" border="0" cellspacing="" cellpadding="" width="100%" style="margin-top: 10px;">
+				<tr>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>1</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>推荐人识别&nbsp;&nbsp;&nbsp;</p>	
+					
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>2</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>手机验证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+					<td class="active"><strong>
+						<img class="circle" src="../../icon/bg_number_orange.png"/>
+						<i>3</i>
+						<br />
+						<p>个人资料&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+				</tr>
+			</table>
+
+			<div id="" style="text-align:center;margin-top: 30px;">
+				<input type="text" name="" id="nickname" class="mui-input-clear" placeholder="请输入昵称" />
+				<input type="password" name="pwd" id="pwd" class="mui-input-clear" placeholder="请输入密码" />
+				<input type="password" name="repwd" id="repwd" class="mui-input-clear" placeholder="请重复密码" onkeyup=""/>
+				
+				<div class="mui-input-row mui-checkbox mui-left" id="besure" style="margin-bottom: 5px;">
+						<input id="besureInput" name="checkbox" type="checkbox">
+						<span id="besureLabel">我同意并接受<a style="color: green;">《薪仁居用户协议》</a></span>
+				</div>
+				
+				<a> <button id="submitBtn" type="button">提交</button></a>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../../js/require.js" ></script>
+		<script type="text/javascript" src="../../js/register/register-step3.js" ></script>
+		<script>
+			var nickname = document.getElementById("nickname");
+			var pwd = document.getElementById("pwd");
+			var repwd = document.getElementById("repwd");
+			function checkNickname(){
+				if(nickname.value.length < 1){
+					mui.toast("请输入昵称");
+					return false;
+				}else{
+					return true;
+				}
+			}
+			
+			function checkPwd(){
+				if(pwd.value != repwd.value){
+					mui.toast("两次密码不一致");
+					return false;
+				}else if(pwd.value == '' || repwd.value == ''){
+					mui.toast("请输入密码");
+					return false;
+				}else{
+					return true;
+				}
+			}
+		</script>
+	</body>
+
+</html>

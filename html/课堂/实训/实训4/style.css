@@ -1,0 +1,31 @@
+@charset utf-8;
+div{
+	height: 100px;
+	width: 200px;
+	border: blue solid 5px;
+	color: black;
+	background-color: red;
+}
+
+div:hover{
+	background-color: black;
+	color: white;
+	font-weight: 800px;
+	border: dashed 3px red;
+}
+div a {
+	display: inline-block;
+	height: 100px;
+	width: 200px;
+	text-decoration: none;
+	color: black;
+}
+
+div a:hover{
+	font-weight: bold;
+	color: white;
+}
+
+div a:active{
+	color: red;
+}

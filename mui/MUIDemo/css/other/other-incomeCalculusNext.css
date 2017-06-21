@@ -1,0 +1,17 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+	color: #757575;
+}
+
+/*title*/
+.mui-bar {
+    background-color: white;
+}
+.mui-title {
+    text-align: left;
+}

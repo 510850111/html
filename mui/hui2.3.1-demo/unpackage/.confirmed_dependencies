@@ -1,0 +1,9 @@
+{
+	"index.html": {
+		"resources": [
+			"css/hui.css",
+			"css/fonts/iconfont.woff",
+			"js/hui.js"
+		]
+	}
+}

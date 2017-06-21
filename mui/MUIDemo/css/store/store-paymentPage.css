@@ -1,0 +1,106 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*global*/
+body{
+	font-family: "微软雅黑";
+	font-size: 15px;
+}
+
+/*nav*/
+#nav .mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    border: none;
+      padding: 11px 12px;
+}
+.mui-bar .mui-title{
+	color:#696969 ;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    color:#6A6A6A;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+.mui-title {
+    text-align: left;
+}
+/*reminder*/
+#reminder {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    background-color: white;
+    position:relative;
+}
+#reminderInner {
+    position: absolute;
+    font-size: 17px;
+    width: 90%;
+    left: 5%;
+    top: 20%;
+    padding: 18px 10px;
+    border: 1px solid #ccc;
+    border-radius:6px;
+}
+#reminderInner p{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #8f8f94;
+}
+/*check*/
+.mui-input-row {
+	height: 60px;
+    position: relative;
+    margin-top: 13px;
+    background-color: white;
+}
+#paymentInfo {
+    width: 80%;
+    margin-top: -42px;
+    margin-left: 59px;
+    /* display: inline-block; */
+}
+#paymentInfo p{
+    margin-bottom: 0;
+}
+img {
+    border: 0;
+    width: 38px;
+    margin-top: 15px;
+    margin-left: 12px;
+    margin-right: 7px;
+    padding: 0;
+}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio] {
+    top: 14px;
+    right: 1%;
+}
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+    color: #09BB07;
+}
+#paymentInfo input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+    width: 103%;
+    height: 24px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    font-size: 15px;
+}
+/*button*/
+#submitButton {
+    width: 90%;
+    background-color:#e89a3f;
+    color: white;
+    font-size: 17px;
+    margin-top: 14px;
+    margin-left: 5%;
+    border-radius: 5px;
+    padding: 15px 12px;
+}

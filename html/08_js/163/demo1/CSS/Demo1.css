@@ -1,0 +1,36 @@
+@charset UTF-8;
+
+a{
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+	font-size: 32px;		
+}
+
+#List {
+	width: 80px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	border: 1px yellow solid;
+	color: yellow;
+	background-color: blue;
+}
+
+.ListABC  a {
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border: 1px yellow solid;
+	display: inline-block;
+	background-color: red;
+}
+
+.ListABC a:hover{
+	background-color: #000;
+	color: white;
+}

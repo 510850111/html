@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body id="refreshContainer">
+		<div class="mui-content" id="mybody">
+			<div id="refreshContainer">
+				<div class="mui-input-row mui-search" style="margin-top: 18px;">
+					<input id="searchBox" type="search" class="mui-input-clear" placeholder="请输入要搜索的内容" onkeypress="isSearch()">
+				</div>
+
+				<ul class="mui-table-view mui-grid-view mui-grid-9" id="grid9UL"></ul>
+			</div>
+
+			<ul class="mui-table-view" style="margin-top: 18px; margin-bottom: 8px;">
+				<li class="mui-table-view-cell" style="text-align: center;">
+					<p>
+						- 最新更新 -
+					</p>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view" id="newUL"></ul>
+
+			<div style="margin-bottom: 44px;"></div>
+
+			<div class="mui-content" id="mybodyHidden" style="display: none;">
+
+			</div>
+		</div>
+
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/h.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: '#refreshContainer', //下拉刷新容器标识
+					//下拉刷新
+					down: {
+						height: 50,
+						auto: true,
+						contentdown: "下拉可以刷新",
+						contentover: "释放立即刷新",
+						contentrefresh: "正在刷新......",
+						callback: mui.plusReady.dataInit
+					}
+				}
+			});
+
+			var retryCount = 0;
+			var navTagA = {}; //保存导航的网址
+			var navTagText = {}; //保存导航名称
+			var newLiTargetHref = {}; //保存最新更新的网址
+			var self;
+			var downloadData;
+
+			function openCategoryDetail(target, name) {
+				mui.openWindow({
+					url: '../CategoryDetail/CategoryDetail.html',
+					id: '../CategoryDetail/CategoryDetail.html',
+					extras: {
+						'url': target,
+						'name': name
+					}
+				})
+			}
+
+			function resetPull() {
+				//				mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //结束下拉刷新
+				//				mui('#refreshContainer').pullRefresh().refresh(true); //重置上拉
+			}
+
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_next = plus.webview.getWebviewById('sub2.html');
+				_index = plus.webview.getLaunchWebview(); //获取入口页
+				_self.drag({
+					direction: 'left',
+					moveMode: 'followFinger'
+				}, {
+					view: _next,
+					moveMode: 'follow'
+				}, function(e) {
+					if(e.type == 'end' && e.result) {
+						_index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav2").addClass("mui-active")'); //取消所有导航栏被选中的状态,增加第二个导航被选中
+					}
+				});
+
+				//				fillDataFromLocal();
+				dataInit();
+
+				function dataInit() {
+					mui.toast('正在尝试获取在线数据......');
+					mui.ajax(
+						'http://m.wodexiaoshuo123.com/', {
+							type: 'GET',
+							//							async: true,
+							//						timeout: 10000,
+							success: function(resp) {
+								retryCount = 0;
+								h('#mybodyHidden').html(resp);
+
+								document.getElementById('mybodyHidden').innerHTML = resp;
+
+								var grid9UL = document.getElementById("grid9UL");
+
+								//获取导航的所有a元素
+								var tagA = document.getElementById("NavBox").getElementsByTagName("a");
+
+								var str = '';
+								//填充导航数据
+								for(var i = 0; i < tagA.length; i++) {
+									navTagA[i] = tagA[i].href; //保存导航的数据
+									navTagText[i] = tagA[i].innerHTML
+									var params = 'openCategoryDetail(navTagA[' + i + '], navTagText[' + i + '])';
+									str +=
+										'<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 redBg">' +
+										'<a href = "javascript:' + params + ';">' +
+										'<div class="mui-media-body">' + tagA[i].innerHTML + '</div>' +
+										'</a>' +
+										'</li>';
+								}
+
+								h('#grid9UL').html(str);
+								str = ''; //导航数据填充完成,清空数据
+
+								//填充最新更新数据
+								var newLiTarget = document.getElementsByClassName("d01"); //获取链接地址
+								var newLiTitle = document.getElementsByClassName("d01"); //获取标题
+								var newLiCapter = document.getElementsByClassName("d02"); //获取章节
+								var newLiCategory = document.getElementsByClassName("d03"); //获取分类的div
+								var newLiDate = document.getElementsByClassName("s01"); //获取更新时间
+								var newLiStatus = document.getElementsByClassName("s02"); //状态和字数
+								var newLiAuthor = document.getElementsByClassName("d03"); //作者
+
+								//开始整合最新列表
+								for(var i = 0; i < 5; i++) {
+									var TargeText = newLiTarget[i].getElementsByTagName('a'); //拿到a标签下的文字
+									newLiTargetHref[i] = TargeText[0].href; //保存链接地址
+									var newLiCapterText = newLiCapter[i].getElementsByTagName('a'); //拿到章节文字
+									var newLiCategoryText = newLiCategory[i].getElementsByTagName('a'); //拿到所属分类文字
+									var newLiAuthorText = newLiAuthor[i].getElementsByTagName('a');
+									var params = 'openDetail(newLiTargetHref[' + i + '])';
+									str +=
+										'<li class="mui-table-view-cell">' +
+										'<a href=javascript:' + params + '; style="line-height: 1.3em;">' +
+										'<div id="ItemTitle">' +
+										TargeText[0].innerHTML +
+										'<span id="newDate" class="mui-pull-right">' + newLiDate[i].innerHTML + '</span>' +
+										'</div>' +
+										'<div id="NewCapter">' +
+										'最新:' + newLiCapterText[0].innerHTML +
+										'<span id="status" class="mui-pull-right">' + '' + newLiStatus[i].innerHTML + '</span>' +
+										' </div>' +
+										'<div class="Category">' +
+										'分类:' + newLiCategoryText[0].innerHTML +
+										'<span id="author" class="mui-pull-right">' + '作者:' + newLiAuthorText[1].innerHTML + '</span>' +
+										'</div>' +
+										'</a>' +
+										'</li>';
+								}
+								//插入最新更新列表数据
+								h('#newUL').html(str);
+								//插入完毕,清空数据
+								str = '';
+
+								//删除所有缓存
+								document.getElementById('mybodyHidden').innerHTML = '';
+								resetPull();
+								mui.toast('在线数据加载完毕');
+								plus.storage.removeItem('index');
+								plus.storage.setItem('index', resp);
+
+								resp = '';
+								return;
+
+							},
+							error: function() {
+								mui.toast('出错啦,正在重试...');
+								if(retryCount < 3) {
+									dataInit();
+								} else {
+									mui.toast('连接好像有问题,请稍后再试吧!')
+								}
+							}
+						}
+					)
+				}
+
+				function isSearch() {
+					if(event.keyCode == 13) {
+						var searchBox = document.getElementById("searchBox");
+						var url = search(searchBox.value);
+						console.log(url);
+						mui.openWindow({
+							url: '../Search/searchDetail.html',
+							id: 'searchDetail.html',
+							extras: {
+								'keyWord': searchBox.value,
+								'url': url
+							}
+						});
+					}
+				}
+
+				var data = plus.storage.getItem('index');
+
+				document.getElementById('mybodyHidden').innerHTML = data;
+				var grid9UL = document.getElementById("grid9UL");
+
+				//获取导航的所有a元素
+				var tagA = document.getElementById("NavBox").getElementsByTagName("a");
+
+				var str = '';
+				//填充导航数据
+				for(var i = 0; i < tagA.length; i++) {
+					navTagA[i] = tagA[i].href; //保存导航的数据
+					navTagText[i] = tagA[i].innerHTML
+					var params = 'openCategoryDetail(navTagA[' + i + '], navTagText[' + i + '])';
+					str +=
+						'<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 redBg">' +
+						'<a href = "javascript:' + params + ';">' +
+						'<div class="mui-media-body">' + tagA[i].innerHTML + '</div>' +
+						'</a>' +
+						'</li>';
+				}
+
+				h('#grid9UL').html(str);
+				str = ''; //导航数据填充完成,清空数据
+
+				//填充最新更新数据
+				var newLiTarget = document.getElementsByClassName("d01"); //获取链接地址
+				var newLiTitle = document.getElementsByClassName("d01"); //获取标题
+				var newLiCapter = document.getElementsByClassName("d02"); //获取章节
+				var newLiCategory = document.getElementsByClassName("d03"); //获取分类的div
+				var newLiDate = document.getElementsByClassName("s01"); //获取更新时间
+				var newLiStatus = document.getElementsByClassName("s02"); //状态和字数
+				var newLiAuthor = document.getElementsByClassName("d03"); //作者
+
+				//开始整合最新列表
+				for(var i = 0; i < 5; i++) {
+					var TargeText = newLiTarget[i].getElementsByTagName('a'); //拿到a标签下的文字
+					newLiTargetHref[i] = TargeText[0].href; //保存链接地址
+					var newLiCapterText = newLiCapter[i].getElementsByTagName('a'); //拿到章节文字
+					var newLiCategoryText = newLiCategory[i].getElementsByTagName('a'); //拿到所属分类文字
+					var newLiAuthorText = newLiAuthor[i].getElementsByTagName('a');
+					var params = 'openDetail(newLiTargetHref[' + i + '])';
+					str +=
+						'<li class="mui-table-view-cell">' +
+						'<a href=javascript:' + params + '; style="line-height: 1.3em;">' +
+						'<div id="ItemTitle">' +
+						TargeText[0].innerHTML +
+						'<span id="newDate" class="mui-pull-right">' + newLiDate[i].innerHTML + '</span>' +
+						'</div>' +
+						'<div id="NewCapter">' +
+						'最新:' + newLiCapterText[0].innerHTML +
+						'<span id="status" class="mui-pull-right">' + '' + newLiStatus[i].innerHTML + '</span>' +
+						' </div>' +
+						'<div class="Category">' +
+						'分类:' + newLiCategoryText[0].innerHTML +
+						'<span id="author" class="mui-pull-right">' + '作者:' + newLiAuthorText[1].innerHTML + '</span>' +
+						'</div>' +
+						'</a>' +
+						'</li>';
+				}
+				//插入最新更新列表数据
+				h('#newUL').html(str);
+				//插入完毕,清空数据
+				str = '';
+
+				//删除所有缓存
+				document.getElementById('mybodyHidden').innerHTML = '';
+				resetPull();
+				mui.toast('本地数据加载完毕');
+
+			})
+		</script>
+	</body>
+
+</html>

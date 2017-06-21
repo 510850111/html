@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		sub2
+		<div id="aaa">
+
+		</div>
+		<div id="mybodyHidden"></div>
+
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/h.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_next = plus.webview.getWebviewById('sub3.html');
+				_index = plus.webview.getLaunchWebview(); //获取入口页
+				_prev = plus.webview.getWebviewById('sub1.html');
+
+				//向左滑动
+				_self.drag({
+					direction: 'left',
+					moveMode: 'followFinger'
+				}, {
+					view: _next,
+					moveMode: 'follow'
+				}, function(e) {
+					if(e.type == 'end' && e.result) {
+						_index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav3").addClass("mui-active")'); //取消所有导航栏被选中的状态,增加第三个导航被选中
+					}
+				});
+
+				//向右滑动
+				_self.drag({
+					direction: 'right',
+					moveMode: 'followFinger'
+				}, {
+					view: _prev,
+					moveMode: 'follow'
+				}, function(e) {
+					if(e.type == 'end' && e.result) {
+						_index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav2").addClass("mui-active")'); //取消所有导航栏被选中的状态,增加第一个导航被选中
+					}
+				});
+
+				//获取本地存储的数据
+				var localData = plus.storage.getItem("index");
+				//将本地数据填充到页面
+				document.getElementById("mybodyHidden").innerHTML = localData;
+				//获取各类主要分类
+				var cat_box = document.getElementsByClassName("cat-box")[0].getElementsByTagName("h2");
+				var catBox = {};//目录
+				var catBoxContent = {};//目录里面的内容,每三个为一个目录的内容
+				var catBoxContentTitleAndAuthor = {};//标题和作者
+				var catBoxContentInfo = {};//简介
+				for(var i = 0; i < cat_box.length; i++) {
+					catBox[i] = cat_box[i].getElementsByTagName("a")[0].innerHTML;//拿到标题
+					
+					
+					console.log(catBox[i])
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

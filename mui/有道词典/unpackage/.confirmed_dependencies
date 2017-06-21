@@ -1,0 +1,60 @@
+{
+  "index.html": {
+    "resources": [
+      "js/h.js",
+      "imgs/logo.png",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "sub1.html",
+      "imgs/searchBut.png"
+    ],
+    "refer": [
+      "sub4.html",
+      "sub3.html",
+      "sub2.html",
+      "sub1.html"
+    ]
+  },
+  "sub3.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "js/h.js"
+    ]
+  },
+  "sub1.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "js/h.js"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  },
+  "sub2.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "js/h.js"
+    ]
+  },
+  "sub4.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "imgs/appLogo.png",
+      "js/h.js"
+    ]
+  },
+  "info.html": {
+    "resources": [
+      "js/h.js",
+      "js/mui.min.js",
+      "css/mui.css",
+      "fonts/mui.ttf",
+      "imgs/share.png"
+    ]
+  }
+}

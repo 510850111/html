@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表测试</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src = "js/index.js"></script>
+</head>
+<body>
+	<div class="contain">
+		<h2>好友列表</h2>
+
+		<ul id="ulFriendList" class="classUlItem">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>E</li>
+			<li>F</li>
+			<li>G</li>
+			<li>H</li>
+			<li>I</li>
+		</ul>
+
+		<h2>企业列表</h2>
+
+		<ul id="ulCompanyList" class="classUlItem">
+			<li>J</li>
+			<li>K</li>
+			<li>L</li>
+			<li>M</li>
+			<li>N</li>
+			<li>O</li>
+		</ul>
+
+		<h2>黑名单</h2>
+		
+		<ul id="ulHateList" class="classUlItem">
+			<li>P</li>
+			<li>Q</li>
+			<li>R</li>
+			<li>S</li>
+			<li>T</li>
+			<li>U</li>
+		</ul>
+	</div>
+	
+
+
+
+</body>
+</html>

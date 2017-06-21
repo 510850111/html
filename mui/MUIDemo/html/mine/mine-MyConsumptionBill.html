@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的消费账单</h1>
+		</header>
+		<div class="mui-content">
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+					全部订单
+				</a>
+				<a class="mui-control-item" href="#item2mobile">
+					待评价
+				</a>
+				<a class="mui-control-item" href="#item3mobile">
+					未支付
+				</a>
+				<a class="mui-control-item" href="#item2mobile">
+					已支付
+				</a>
+				<a class="mui-control-item" href="#item3mobile">
+					退款售后
+				</a>
+			</div>
+			<ul id="store01" class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+						<div class="mui-media-body">
+							<div>
+								<span id="storeName" class="mui-ellipsis">
+					                		蜀大侠川味火锅
+					                	</span>
+								<div id="storeinfo">
+									<p>订单号:65677755432</p>
+									<p>时间:2017-03-10 00:00</p>
+									<p>消费:￥567</p>
+									<p>收益:26</p>
+									<button class="mui-btn mui-pull-right">评论</button>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+						<div class="mui-media-body">
+							<div>
+								<span id="storeName" class="mui-ellipsis">
+					                		蜀大侠川味火锅
+					                	</span>
+								<div id="storeinfo">
+									<p>订单号:65677755432</p>
+									<p>时间:2017-03-10 00:00</p>
+									<p>消费:￥567</p>
+									<p>收益:26</p>
+									<button class="mui-btn mui-pull-right">评论</button>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+						<div class="mui-media-body">
+							<div>
+								<span id="storeName" class="mui-ellipsis">
+					                		蜀大侠川味火锅(人民南路店)
+					                	</span>
+								<div id="storeinfo">
+									<p>订单号:65677755432</p>
+									<p>时间:2017-03-10 00:00</p>
+									<p>消费:￥567</p>
+									<p>收益:26</p>
+									<button class="mui-btn mui-pull-right">评论</button>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			mui.plusReady(function(){
+				var store01=document.getElementById('store01');
+				
+				store01.addEventListener('tap',function(){
+					mui.openWindow({
+						url:'../mine/mine-MyCommentsPage.html',
+						id:'store01'
+					})
+				});
+			})
+		</script>
+	</body>
+
+</html>

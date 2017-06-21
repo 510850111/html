@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+
+/*去除body,h1,ul中自带的内外边距*/
+body ,  h1 , ul  {
+	margin: 0;
+	padding: 0;
+}
+
+/*去除无序列表前面的小圆点*/
+ul {
+	list-style: outside none none;
+}
+
+/*去除超链接的下划线*/
+a {
+	text-decoration: none;
+}
+
+/*设置导航的宽度高度和背景颜色*/
+.nav {
+	width: 100%;
+	height: 75px;
+	background-color:  #333;
+}
+
+/*设置一个section的宽高和边距,并使它居中*/
+.center {
+	width: 1275px;
+	height: 75px;	
+	margin: 0  auto;
+}
+
+/*设置logo的大小,把"某某旅游社"缩进-9999像素,使之不可见.*/
+.Logo {
+	width: 200px;
+	height: 75px;
+	background-image: url("../img/logo.png");
+	text-indent: -9999px;
+	float: left;
+}
+
+
+.link {
+	height: 75px;
+	line-height: 75px;
+	float: right;
+}
+
+.link li {
+	width: 120px;
+	text-align: center;
+	float: left;
+}
+
+/*把a标签从内联标签变成内联块标签*/
+.link a {
+	color: #eee;
+	display: block;
+}
+
+/*鼠标停留在文字上方和已经选中的模块的颜色变化*/
+.link a:hover , .actived a {
+	background-color: #000;
+}

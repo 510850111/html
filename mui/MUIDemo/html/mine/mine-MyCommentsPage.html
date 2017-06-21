@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mine//mine-MyCommentsPage.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" id="nav">
+		    <a class="mui-icon mui-icon-back mui-pull-left mui-action-back">
+		    	<!--<img id="back" src="../icon/back.png" />-->
+		    </a>
+		    <h1 class="mui-title">订单评论</h1>
+		</header>
+		<div class="mui-content">
+		    <div id="score" style="height: 69px;">
+		    	<p id="scoreAll">总分</p>
+		    	<div id="starNum">
+		    		<span>
+		    		<img src="../../icon/fullStar.png"/>
+		    	</span>
+		    	<span>
+		    		<img src="../../icon/fullStar.png"/>
+		    	</span>
+		    	<span>
+		    		<img src="../../icon/fullStar.png"/>
+		    	</span>
+		    	<span>
+		    		<img src="../../icon/emptyStar.png"/>
+		    	</span>
+		    	<span>
+		    		<img src="../../icon/emptyStar.png"/>
+		    	</span>
+		    	</div>
+		    	
+		    	<p id="scoreComment">一般</p>
+		    	
+		    </div>
+		    <div class="mui-input-row" id="comment" style="margin: 10px 0px;">
+		<textarea rows="5" placeholder="说说消费后的感受，谈谈店家的服务、产品和环境吧~"></textarea>
+	</div>
+	<button id="release">发布</button>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+
+</html>

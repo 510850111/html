@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/store/store.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<!--顶部导航栏-->
+			<div class="mui-content mui-row" id="nav">
+				<span class="mui-input-row mui-pull-left" id="nav-icon-location">成都</span>
+				<div class="mui-input-row mui-search" id="nav-search">
+					<div class="mui-input-clear mui-input-row mui-search">
+						<input type="search" placeholder="蜀九香火锅">
+					</div>
+				</div>
+				<span id="nav-icon-message">
+						<img src="../../icon/nearMap.png"/>
+					</span>
+			</div>
+			<!--button-->
+			<div class="mui-content mui-row" id="button">
+				<a href="#allCategory" class="mui-btn mui-btn mui-col-sm-4">
+					全部
+					<span class="mui-icon mui-icon mui-icon-arrowdown"></span>
+				</a>
+				<a href="#near100m" class="mui-btn mui-btn mui-col-sm-4">附近  <span class="mui-icon mui-icon mui-icon-arrowdown">
+						</span>
+				</a>
+				<a href="#intelligentSort" class="mui-btn mui-btn mui-col-sm-4">智能排序
+					<span class="mui-icon mui-icon mui-icon-arrowdown"></span>
+				</a>
+			</div>
+			<!--弹出菜单-->
+			<div id="allCategory" class="mui-popover">
+				<ul class="mui-table-view" id="allCategoryUl">
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell choose">
+								<label>全部</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>美食</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>电影</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>酒店</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>休闲娱乐</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>丽人</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>旅游</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>ktv</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>生活服务</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>学习培训</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="near100m" class="mui-popover">
+				<ul class="mui-table-view" id="allCategoryUl">
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell choose">
+								<label>附近 (智能距离)</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>1千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>2千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>3千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>4千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>5千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>10千米</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>全国</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="intelligentSort" class="mui-popover">
+				<ul class="mui-table-view" id="allCategoryUl">
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell choose">
+								<label>智能排序</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>好评优先</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>返利优先</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<div class="mui-table-view-cell">
+								<label>距离最近</label>
+								<!--<input name="radio1" type="radio">-->
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--content-->
+			<div id="guessContent">
+				<ul id="storeListUL" class="mui-table-view">
+					<li class="mui-table-view-cell mui-media" id="store01">
+						<a href="javascript:;">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+										<img src="../../icon/star_full.png"/>
+										<img src="../../icon/star_full.png"/>
+										<img src="../../icon/star_full.png"/>
+										<img src="../../icon/star_full.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">春熙路 < 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">返利:2%</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div class="gap1"></div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">
+										春熙路
+										< 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">
+									返利:2%
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div class="gap1"></div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">
+										春熙路
+										< 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">
+									返利:2%
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div class="gap1"></div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">
+										春熙路
+										< 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">
+									返利:2%
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/require.js" ></script>
+		<script type="text/javascript" src="../../js/store/store.js" ></script>
+	</body>
+
+</html>

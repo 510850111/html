@@ -1,0 +1,98 @@
+@charset "utf-8";
+body{
+	background-color: #EDEDED;
+	height: 1500px;	
+}
+
+#container{
+	background-color: #EDEDED;
+}
+
+#honourBox {
+	/*width: 1263px;*/
+	width: 99%;
+	/*min-width: 1900px;*/
+	max-width: 1900px;
+	height: 1430px;
+	margin: 0px auto;
+	/*background-color: #ccc;*/
+	/*background-color: #EDEDED;*/
+	text-align: center;
+	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
+	box-shadow:darkgrey 0px 0px 3px;
+}
+
+#honourBox .honourBox_instr h2 {
+	font-size: 45px;
+	letter-spacing: 2px;
+	/*color: #666;*/
+	margin: 10px 0px;
+}
+
+#honourBox .honourBox_instr p {
+	font-weight: bold;
+	color: #666;
+	margin: 10px 0px;
+}
+
+#honourBox figure {
+	color: #777;
+	line-height: 1.5;
+	width: 400px;
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 10px;
+	margin: 10px 10px 10px 12px;
+	border-radius: 8px;
+	position: relative;
+	float: left;
+	box-shadow: #666 0px 0px 6px;
+}
+
+#honourBox figure img {
+	width: 380px;
+	height: 230px;
+	vertical-align: middle;
+	border-radius: 8px;
+}
+
+#honourBox figcaption {
+	text-align: left;
+	margin: 0 0 5px 0;
+	
+}
+
+#honourBox .caption {
+	font-size: 18px;
+	text-align: left;
+	font-weight: bold;
+	color: #000;
+}
+
+#honourBox .dateOfAward {
+	font-style: normal;
+	float: right;
+}
+
+#honourBox .prizewinner {
+	float: left;
+	color: #F60;
+}
+
+#honourBox strong {
+	font-size: 20px;
+}
+
+#honourBox .type {
+	width: 90px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	background-color: #95b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}

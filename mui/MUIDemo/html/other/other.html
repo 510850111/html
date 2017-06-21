@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/other/other.css" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-pull-left">业务必读</h1>
+		</header>
+
+		<div class="mui-content">
+			<div id="threeBlock">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+						<a href="#" id="IncomeTutorial">
+							<!--<span class="mui-icon mui-icon-home"></span>-->
+							<span>
+								<img src="../../icon/incomeTutorial.png" />
+							</span>
+							<div class="mui-media-body">收益教程</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+						<a id="RevenueCalculus" href="#">
+							<!--<span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>-->
+							<span>
+								<img src="../../icon/calculate.png"/>
+							</span>
+							<div class="mui-media-body">收益演算</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-4">
+						<a id="MerchantsSettled" href="#">
+							<!--<span class="mui-icon mui-icon-chatbubble"></span>-->
+							<span>
+								<img src="../../icon/shopSettle.png" />
+							</span>
+							<div class="mui-media-body">商家入驻</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<ul class="mui-table-view ulArea" style="margin-top: 8px;">
+			<li class="mui-table-view-cell">
+				<a id="UpdateCheck" class="">
+					<span class="mui-icon mui-icon-loop">&nbsp;</span> 版本更新
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a id="ClearCache" class="">
+					<span class="mui-icon mui-icon-trash">&nbsp;</span>缓存清理
+				</a>
+			</li>
+		</ul>
+		
+		<ul class="mui-table-view ulArea" style="margin-top: 8px;">
+		        <li class="mui-table-view-cell">
+		            <a id="CustomerServiceCenter" class="">
+		                <span class="mui-icon mui-icon-phone">&nbsp;</span>客服中心
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a id="Help" class="">
+		                 <span class="mui-icon mui-icon-help">&nbsp;</span>帮助
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a id="About" class="">
+		                <span class="mui-icon mui-icon-info">&nbsp;</span>关于
+		            </a>
+		        </li>
+		    </ul>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			var IncomeTutorial = document.getElementById("IncomeTutorial");	//收益教程
+			var RevenueCalculus = document.getElementById("RevenueCalculus");//收益演算
+			var MerchantsSettled = document.getElementById("MerchantsSettled");//商家入驻
+						
+			var UpdateCheak = document.getElementById("UpdateCheck");//检查更新
+			var ClearCache = document.getElementById("ClearCache");//清除缓存
+			var CustomerServiceCenter = document.getElementById("CustomerServiceCenter");//客服中心
+			var Help = document.getElementById("Help");//帮助
+			var About = document.getElementById("About");//关于
+			
+			
+			//收益教程
+			IncomeTutorial.addEventListener('tap',function(){
+				
+			});
+			
+			//收益演算
+			RevenueCalculus.addEventListener('tap',function(){
+				
+			});
+			
+			//商家入驻
+			MerchantsSettled.addEventListener('tap',function(){
+				
+			});
+			
+			//检查更新
+			UpdateCheak.addEventListener('tap',function(){  
+        		mui.toast("当前为最新版本!",{ duration:'short', type:'div' })
+    		});  
+			
+			//清除缓存
+			ClearCache.addEventListener('tap',function(){
+				var CacheSize = 28.86;
+				var confirmMessage = "是否清除" + CacheSize + "Mb的缓存?";
+				var toastMessage = CacheSize+"Mb的缓存已经清除!";
+				var btn = ['确认', '取消'];
+				
+				mui.confirm(confirmMessage,"",btn,function(e){
+					if(e.index == 0){
+						mui.toast(toastMessage);
+					}else{
+						mui.toast("点击了取消按钮");
+					};
+				},'div');
+			});
+			
+			//客服中心
+			CustomerServiceCenter.addEventListener('tap',function(){
+				
+				
+			});
+			
+			//帮助
+			Help.addEventListener('tap',function(){
+				mui.alert("薪仁居是....................................................................................................",
+				"帮助",
+				"我知道了",
+				function(){},//回调函数
+				'div'//强制使用div绘制
+				);
+			});
+			
+			//关于
+			About.addEventListener('tap',function(){
+				
+			});
+			
+			
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,67 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	color: #696969;
+}
+a{
+	color: white;
+}
+
+.gap{
+	width: 100%;
+	height: 1px;
+	background-color: #B6B6B6;
+}
+/*title*/
+.mui-bar .mui-title{
+	color:#696969 ;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    color:#6A6A6A;
+}
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+    background-color: white;
+}
+/*table*/
+#mine-MyProfit-Table01,
+#mine-MyProfit-Table02 {
+    margin-top: 10px;
+    background-color: white;
+    position: relative;
+}
+#mine-MyProfit-Table-tr0{
+	text-align: left;
+}
+#mine-MyProfit-Table-tr0,
+#mine-MyProfit-Table-tr1,
+#mine-MyProfit-Table-tr2,
+#mine-MyProfit-Table-tr3,
+#mine-MyProfit-Table-tr4{
+	height: 45px;
+	border-bottom: 1px solid #B6B6B6;
+}
+img{
+	width: 20px;
+}
+p {
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: gray;
+    position: absolute;
+    top: 1px;
+    left: 40px;
+}
+td, th {
+    padding: 0;
+    margin-top: 5px;
+}

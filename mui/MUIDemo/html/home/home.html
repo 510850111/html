@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/home/home.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<!--顶部导航栏-->
+			<div class="mui-content mui-row" id="nav">
+				<span class="mui-input-row mui-pull-left" id="nav-icon-location">成都</span>
+				<div class="mui-input-row mui-search" id="nav-search">
+					<div class="mui-input-clear mui-input-row mui-search">
+						<input id="inputOne" type="search" placeholder="蜀九香火锅" onfocus="searchOnFoucs();">
+					</div>
+				</div>
+				<span id="nav-icon-message" class="mui-pull-right">
+					<img id="nav-icon-message-img" src="../../icon/bell.png"/>
+					<span id="nav-icon-message-badge" class="mui-badge mui-badge-red" >7</span>
+				</span>
+			</div>
+
+			<!--第二导航栏-->
+			<ul class="mui-table-view mui-grid-view mui-grid-9" id="nav-two">
+				<li class="mui-table-view-cell mui-media mui-col-sm-4">
+					<a id="ScanQrCodeToPay">
+						<span>
+							<img src="../../icon/scan.png" />
+						</span>
+						<div class="mui-media-body">扫码支付</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media  mui-col-sm-4">
+					<a id="myProfit">
+						<span>
+							<img src="../../icon/income.png" />
+						</span>
+						<div class="mui-media-body">我的收益</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-sm-4">
+					<a id="share">
+						<span>
+							<img src="../../icon/shareRecommend.png" />
+						</span>
+						<div class="mui-media-body">分享推荐</div>
+					</a>
+				</li>
+			</ul>
+
+			<div id="functionTen" class="mui-slider-item">
+				<ul id="functionTenUL" class="mui-table-view mui-grid-view mui-grid-9">
+					<!--<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category1" >
+							<span>
+								<img src="../../icon/food.png" />
+							</span>
+							<div class="mui-media-body">美食</div>
+						</a>
+					</li>-->
+					<!--<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category2" href="#">
+							<span>
+							<img src="../../icon/education.png" />
+							</span>
+							<div class="mui-media-body" style="font-size: 12px;">教育培训</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category3" href="#">
+							<span>
+								<img src="../../icon/healthCare.png" />
+							</span>
+							<div class="mui-media-body">健康</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category4" href="#">
+							<span>
+								<img src="../../icon/relax.png" />
+							</span>
+							<div class="mui-media-body" style="font-size: 12px" ;>品铭休闲</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category5" href="#">
+							<span>
+								<img src="../../icon/KTV.png" />
+							</span>
+							<div class="mui-media-body">KTV</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category6" href="#">
+							<span>
+								<img src="../../icon/wedding.png" />
+							</span>
+							<div class="mui-media-body" style="font-size: 12px">丽人婚庆</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category7" href="#">
+							<span>
+								<img src="../../icon/shop.jpg" />
+							</span>
+							<div class="mui-media-body">购物</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category8" href="#">
+							<span>
+								<img src="../../icon/lifeServer.png"/>
+							</span>
+							<div class="mui-media-body" style="font-size: 12px">生活服务</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category9" href="#">
+							<span>
+								<img src="../../icon/digital.png"/>
+							</span>
+							<div class="mui-media-body" style="font-size: 12px">通讯数码</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media  mui-col-xs-3 mui-col-sm-2">
+						<a id="category10" href="#">
+							<span>
+								<img src="../../icon/all.png"/>
+							</span>
+							<div class="mui-media-body">全部</div>
+						</a>
+					</li>-->
+				</ul>
+			</div>
+			<div class="totalNumber" align="center">
+				<p>
+					<img src="../../icon/incomeTutorial.png" />
+
+					<a> &nbsp;&nbsp;平台交易数:<span id="orderCount">null</span>单&nbsp;&nbsp;</a>
+				</p>
+			</div>
+			<!--猜你喜欢-->
+			<div class="guess">
+				<p>-&nbsp;&nbsp;猜你喜欢&nbsp;&nbsp;-</p>
+			</div>
+
+			<!--猜你喜欢内容-->
+			<div id="guessContent">
+				<ul class="mui-table-view" style="margin-bottom: 8px;">
+					<li class="mui-table-view-cell mui-media">
+						<a id="storeDetail01">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div class="gap1"></div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_half.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">
+										春熙路
+										< 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">
+									返利:2%
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view" style="margin-bottom: 5px;">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class=" mui-pull-left" src="http://placehold.it/40x30" style="height:100px;width: 100px; margin-right: 8px;">
+							<div class="mui-media-body">
+								<div class="mine-MyCollect-ltem-Title">
+									<p>蜀九香川味火锅</p>
+								</div>
+								<div class="gap1"></div>
+								<div id="mine-MyCollect-ltem-Grade" class="mine-MyCollect-ltem-Grade">
+									<span>
+										<img src="../../icon/star_full.png" >
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_full.png"/>
+									</span>
+									<span>
+										<img src="../../icon/star_half.png"/>
+									</span>
+								</div>
+								<div class="mine-MyCollect-ltem-Type">
+									<p class="mine-MyCollect-ltem-Locate mui-pull-left">川味火锅</p>
+									<p class="mine-MyCollect-ltem-Locate mui-pull-right">
+										春熙路
+										< 100 m </p>
+								</div>
+								<div class="gap"></div>
+								<div id="" class="mui-pull-left mine-MyCollect-ltem-Profit">
+									返利:2%
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/require.js"></script>
+		<script type="text/javascript" src="../../js/home/home.js"></script>
+		<script type="text/javascript">
+			//点击搜索框
+			function searchOnFoucs() {
+				mui.openWindow({
+					url: '../search/search.html',
+					id: 'search'
+				});
+			}
+		</script>
+	</body>
+
+</html>

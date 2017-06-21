@@ -1,0 +1,134 @@
+@charset "utf-8";
+#search {
+	width: 100%;
+	min-width: 1263px;
+	height: 600px;
+	background: url("../img/search.jpg") no-repeat center;
+	position: relative;
+	/*做一个相对点*/
+}
+
+.search_box {
+	width: 550px;
+	height: 65px;
+	background-color: #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -300px;
+	opacity: 0.6;
+	/*透明化*/
+	border-radius: 10px;
+	/*圆角边框*/
+}
+
+.search_input {
+	width: 400px;
+	height: 58px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -98px 0 0 -297px;
+	border-radius: 10px;
+	border: 1px solid #666;
+	color: #666;
+	font-size: 24px;
+	outline: none;
+	padding: 0 10px;
+	opacity: 0.8;
+}
+
+.search_button {
+	width: 120px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -98px 0 0 126px;
+	border-radius: 10px;
+	border: 1px solid #eee;
+	color: #666;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+#tourist {
+	/*width: 1263px;*/
+	width: 100%;
+	min-width: 1900px;
+	max-width: 1900px;
+	height: 1200px;
+	margin: 30px auto;
+	/*background-color: #ccc;*/
+	text-align: center;
+}
+
+#tourist .tourist_instr h2 {
+	font-size: 45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px 0px;
+}
+
+#tourist .tourist_instr p {
+	font-weight: bold;
+	color: #666;
+	margin: 10px 0px;
+}
+
+#tourist figure {
+	color: #777;
+	line-height: 1.5;
+	width: 380px;
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 4px;
+	border-radius: 4px;
+	position: relative;
+	box-shadow: #666 5px 0 10px;
+}
+
+#tourist figure img {
+	width: 380px;
+	height: 230px;
+	vertical-align: middle;
+}
+
+#tourist figcaption {
+	text-align: left;
+}
+
+#tourist .caption {
+	font-size: 18px;
+	text-align: left;
+	font-weight: bold;
+	color: #000;
+}
+
+#tourist .satisfaction {
+	font-style: normal;
+	float: right;
+}
+
+#tourist .price {
+	float: left;
+	color: #F60;
+}
+
+#tourist strong {
+	font-size: 20px;
+}
+
+#tourist .type {
+	width: 90px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	background-color: #95b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}

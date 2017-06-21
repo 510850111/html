@@ -1,0 +1,36 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family:微软雅黑;
+	background-color: #DADADA;
+	color: #696969;
+}
+/*nav*/
+.mui-bar-nav {
+    box-shadow: none;
+    background-color: #E3E3E3;
+}
+.mui-h1, h1 {
+    font-size: 17px;
+    line-height: 192%;
+    font-weight: normal;
+    color: #696969;
+}
+/*三栏  threeBlock*/
+#threeBlock .mui-grid-view.mui-grid-9 {
+    background-color: white;
+}
+#threeBlock .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    width: 33.3%;
+    border-bottom: none;
+}
+#threeBlock .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    font-size: 13px;
+}
+/*列表部分*/
+.ulArea{
+	font-size: 15px;
+}

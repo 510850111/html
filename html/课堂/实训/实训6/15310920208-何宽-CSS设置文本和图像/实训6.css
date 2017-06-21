@@ -1,0 +1,73 @@
+/* CSS Document */
+p{
+	font-family:DFKai-SB;
+	font-size:20px;
+	text-indent:2em;
+}
+
+img {
+	width: 250px;
+	height: 250px;
+}
+
+#head{
+	width:100%;
+	height:80px;
+	float:left;
+	background:url(5-34-11.png) no-repeat;
+}
+#heard ul{
+	list-style:none;
+	border:0px;
+	margin-left:700px;
+}
+#heard li{
+	text-align:center;
+	font-size:30px;
+	float:left;
+	line-height:1.5em;
+	padding:0px 0px 0px 25px;
+}
+#heard a{
+	text-decoration:none;
+}
+#heard a:hover{
+	display:block;
+	background-color:#FFFF66;
+}
+#box{
+	width:100%;
+	float:left;
+	line-height:4em;
+	background:url() no-repeat;
+}
+#container{
+	width:90%;
+	height:200px;
+	float:left;
+	color:#339900;
+	font-size:40px;
+	padding:3px 0px 0px 50px; 
+	
+}
+#container_image{
+	width:600px;
+	height:180px;
+	margin-left:200px;
+}
+#container_image img{
+	width:100px;
+	height:100px;
+	padding:0px 60px;
+}
+#container_image a{
+	text-decoration:none;
+}
+#container_image a:hover{
+	color:#33CCCC;
+}
+
+.middle {
+	width: 100px;
+	height: 100px;
+}

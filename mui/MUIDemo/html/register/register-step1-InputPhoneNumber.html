@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/register/register-step1-inputPhoneNumber.css" />
+		<link rel="stylesheet" href="../../css/register/progressbarTableCommon.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="../../html/mine.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<!--<div id="progressbar1" class="mui-progressbar" style="margin-top: 8px;"><span></span></div>-->
+			<div class="gap"></div>
+			<table id="progressbarTable" border="0" cellspacing="" cellpadding="" width="100%" style="margin-top: 10px;">
+				<tr>
+					<td class="active"><strong>
+						<img class="circle" src="../../icon/bg_number_orange.png"/>
+						<i>1</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>推荐人识别&nbsp;&nbsp;&nbsp;</p>	
+					
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>2</i>
+						<img class="line" src="../../icon/arrow.png" />
+						<br />
+					<p>手机验证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+					<td><strong>
+						<img class="circle" src="../../icon/bg_number_g.png"/>
+						<i>3</i>
+						<br />
+						<p>个人资料&nbsp;&nbsp;&nbsp;</p>
+					</strong>
+					</td>
+				</tr>
+			</table>
+				<div class="" style="text-align: center;">
+				<input id="In_PhoneNumber" type="text" class="mui-input-clear" placeholder="请输入手机号码" onkeyup="phoneNumberCheck();" />
+				<a><button id="IdentityVerificationBtn" type="button" class="mui-btn mui-btn-warning" disabled="ture" >下一步</button></a> 
+			</div>			   
+		</div>
+		<script data-main="../../js/register/register-step1-InputPhoneNumber" src="../../js/require.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function phoneNumberCheck(){
+				//使用正则表达式检验输入的手机号是否是数字且达到11位
+				if(!(/^1[0-9][0-9]\d{8}$/.test(In_PhoneNumber.value))){ 
+					//如果不符合规则,禁用下一步按钮
+			        IdentityVerificationBtn.disabled = true;
+    			}else{
+    				IdentityVerificationBtn.disabled = false;
+    			}
+			};
+		</script>
+	</body>
+
+</html>

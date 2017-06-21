@@ -1,0 +1,79 @@
+{
+	"index.html": {
+		"resources": [
+			"js/h.js",
+			"js/mui.js",
+			"css/mui.css",
+			"fonts/mui.ttf",
+			"index.js",
+			"index.css",
+			"html/main/sub1.html"
+		],
+		"refer": [
+			"html/Search/searchDetail.html",
+			"html/detail/detail.html",
+			"html/main/sub1.html",
+			"html/main/sub2.html",
+			"html/main/sub3.html"
+		]
+	},
+	"html/Search/searchDetail.html": {
+		"resources": [
+			"html/Search/searchDetail.js",
+			"html/Search/searchDetail.css",
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css"
+		]
+	},
+	"html/detail/detail.html": {
+		"resources": [
+			"js/mui.js",
+			"css/hui.css",
+			"js/hui.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/h.js"
+		]
+	},
+	"html/main/sub1.html": {
+		"resources": [
+			"js/h.js",
+			"js/mui.js",
+			"css/mui.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"html/detail/detail.html",
+			"html/CategoryDetail/CategoryDetail.html",
+			"html//Search/searchDetail.html",
+			"html/Search/searchDetail.html"
+		]
+	},
+	"html/main/sub2.html": {
+		"resources": [
+			"js/h.js",
+			"js/mui.js",
+			"css/mui.css"
+		]
+	},
+	"html/main/sub3.html": {
+		"resources": [
+			"js/h.js",
+			"js/mui.js"
+		]
+	},
+	"html/CategoryDetail/CategoryDetail.html": {
+		"resources": [
+			"js/mui.js",
+			"css/mui.css",
+			"fonts/mui.ttf"
+		]
+	},
+	"html//Search/searchDetail.html": {
+		"resources": [
+			"html//Search/searchDetail.css",
+			"html//Search/searchDetail.js"
+		]
+	}
+}

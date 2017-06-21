@@ -1,0 +1,87 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body , .mui-content{
+	background-color: #E9E4D9;
+}
+
+.mui-bar-nav{
+	box-shadow: none;
+	background-color: #E9E4D9;
+}
+
+.header-img{
+	width: 28px;
+	height: 28px;
+	border-radius: 100px;
+	background-color: red;
+	margin-top: 5px;
+}
+
+.mui-bar-nav.mui-bar .mui-icon {
+    margin: 10px 0 0 0 ;
+    padding: 0 0 0 3px;
+}
+
+.mui-bar .mui-icon {
+    padding: 0px;
+}
+
+.header-dict {
+	padding: 10px;
+	line-height: 22px;
+	height: 25px;
+	background-color:#DBD3C7 ;
+	border-radius: 100px;
+}
+
+
+
+
+.header-dict-text{
+	font-size: 16px;
+	color: #706D64;
+}
+
+.mui-content {
+	text-align: center;
+}
+
+.content-Warp1{
+	background-color: #F8F6F1;
+	width: 80%;
+	height: 300px;
+	display: inline-block;
+	border-radius: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hui-swipe{
+	position: relative;
+	height: 100%;
+}
+
+.hui-swipe-indicator{
+	bottom: 13px;
+}
+
+.last-and-remember div{
+	display: inline-block;
+	margin: 25px;
+}
+
+.swipe-last-days,.swipe-today-remember{
+	color: #B5AC95;
+}
+
+.last-days-data,.count-data{
+	color:#78695A ;
+}
+
+.last-days-data,.count-data{
+	font-size: 30px;
+}
+

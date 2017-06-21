@@ -1,0 +1,696 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/home.html",
+			"otherPage/register-step1-IdentityVerification.html",
+			"otherPage/regsiter-step3.html",
+			"img/bottom/mine-filled.png",
+			"img/bottom/mine.png",
+			"img/bottom/index-filled.png",
+			"img/bottom/index.png",
+			"img/bottom/store-filled.png",
+			"img/bottom/store.png",
+			"img/bottom/other.png",
+			"img/bottom/other-filled.png"
+		],
+		"refer": [
+			"html/setting.html",
+			"html/message.html",
+			"html/home.html",
+			"html/mine.html",
+			"html/other.html",
+			"html/store.html",
+			"otherPage/register-step1-IdentityVerification.html"
+		]
+	},
+	"html/home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/home.css",
+			"icon/1.svg",
+			"icon/8.svg",
+			"icon/7.svg",
+			"icon/3.svg",
+			"icon/5.svg",
+			"icon/2.svg",
+			"icon/6.svg",
+			"icon/4.svg",
+			"icon/9.svg",
+			"otherPage/store-detail.html",
+			"otherPage/search.html",
+			"icon/icon2.png",
+			"icon/icon4.png",
+			"icon/icon3.png",
+			"icon/icon1.png",
+			"icon/icon5.png",
+			"icon/scan.png",
+			"icon/income.png",
+			"icon/KTV.png",
+			"icon/relax.png",
+			"icon/collect.png",
+			"icon/healthCare.png",
+			"icon/lifeServer.png",
+			"icon/shop.jpg",
+			"icon/all.png",
+			"icon/wedding.png",
+			"icon/bell.png",
+			"icon/education.png",
+			"css/font-awesome.min.css",
+			"icon/food.png",
+			"icon/shareRecommend.png",
+			"icon/digital.png",
+			"icon/collectChoose.png",
+			"icon/incomeTutorial.png"
+		],
+		"refer": [
+			"otherPage/store-detail.html",
+			"otherPage/Search.html",
+			"otherPage/search.html"
+		]
+	},
+	"html/setting.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/store.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/12.jpg",
+			"icon/location.svg",
+			"css/store.css",
+			"icon/nearMap.png"
+		],
+		"refer": []
+	},
+	"html/mine.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/mine.css",
+			"otherPage/mine-str.html",
+			"otherPage/mine-AllBills.html",
+			"otherPage/mine-MyMessages.html",
+			"icon/payment.svg",
+			"icon/person.svg",
+			"icon/noPaying.svg",
+			"icon/comment.svg",
+			"icon/afterSale.svg",
+			"icon/refund.png",
+			"icon/RMB.png",
+			"icon/message.png",
+			"icon/prePayment.png",
+			"icon/paymented.png",
+			"icon/share.png",
+			"icon/comment.png",
+			"icon/noComment.png",
+			"otherPage/mine-MyProfit.html",
+			"icon/collect.png"
+		],
+		"refer": [
+			"html/mine-AllBills.html",
+			"otherPage/mine-AllBills.html",
+			"otherPage/mine-str.html",
+			"otherPage/mine-MyMessages.html",
+			"otherPage/mine-MyProfit.html",
+			"otherPage/mine-MyConsumptionBill.html",
+			"otherPage/mine-MyCollect.html"
+		]
+	},
+	"html/mine-AllBills.html": {
+		"resources": [
+			"css/mine-AllBills.css"
+		],
+		"refer": []
+	},
+	"otherPage/mine-AllBills.html": {
+		"refer": [
+			"html/mine.html"
+		],
+		"resources": []
+	},
+	"otherPage/mine-str.html": {
+		"resources": [
+			"css/mine-str.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/mine.html"
+		],
+		"refer": [
+			"html/mine.html"
+		]
+	},
+	"otherPage/mine-MyMessages.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/mine.html",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"html/mine.html"
+		]
+	},
+	"html/other.html": {
+		"resources": [
+			"icon/incomeVideo.svg",
+			"icon/income.svg",
+			"css/other.css",
+			"icon/store.svg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"icon/calculate.png",
+			"icon/shopSettle.png",
+			"icon/incomeTutorial.png"
+		],
+		"refer": []
+	},
+	"otherPage/Search.html": {
+		"resources": [
+			"css/search.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"html/home.html"
+		]
+	},
+	"otherPage/store-detail.html": {
+		"resources": [
+			"img/storePic.jpg",
+			"css/store-detail.css",
+			"js/mui.min.js",
+			"icon/person.svg",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/home.html",
+			"icon/mappoint_g.png",
+			"icon/back.png",
+			"icon/phone.png"
+		],
+		"refer": [
+			"html/home.html",
+			"index.html",
+			"html/mine.html"
+		]
+	},
+	"otherPage/search.html": {
+		"resources": [
+			"css/search.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"index.html"
+		],
+		"refer": [
+			"html/home.html",
+			"index.html"
+		]
+	},
+	"otherPage/register-step1-IdentityVerification.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/register-step1-identityVerification.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"index.html",
+			"otherPage/regsiter-step3.html",
+			"otherPage/regsiter-step2.html",
+			"otherPage/register-step1.html"
+		],
+		"refer": [
+			"index.html",
+			"otherPage/regsiter-step3.html",
+			"otherPage/regsiter-step2.html"
+		]
+	},
+	"otherPage/register-step1.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/register-step1.css",
+			"otherPage/register-step1-InputPhoneNumber.html",
+			"otherPage/register-step1-IdentityVerification.html"
+		],
+		"refer": [
+			"otherPage/register-step1-InputPhoneNumber.html",
+			"otherPage/register-step1-IdentityVerification.html"
+		]
+	},
+	"otherPage/register-step1-InputPhoneNumber.html": {
+		"resources": [
+			"css/register-step1-inputPhoneNumber.css",
+			"otherPage/regsiter-step2.html",
+			"otherPage/register-step1.html"
+		],
+		"refer": [
+			"otherPage/register-step1-IdentityVerification.html",
+			"otherPage/regsiter-step2.html",
+			"otherPage/register-step1.html"
+		]
+	},
+	"otherPage/regsiter-step3.html": {
+		"resources": [
+			"css/register-step3.css",
+			"otherPage/register-step1-IdentityVerification.html",
+			"otherPage/regsiter-step2.html",
+			"index.html"
+		],
+		"refer": [
+			"otherPage/register-step1-IdentityVerification.html",
+			"otherPage/regsiter-step2.html",
+			"index.html"
+		]
+	},
+	"otherPage/regsiter-step2.html": {
+		"resources": [
+			"css/register-step2.css",
+			"otherPage/regsiter-step3.html",
+			"otherPage/register-step1-InputPhoneNumber.html",
+			"otherPage/register-step1-IdentityVerification.html"
+		],
+		"refer": [
+			"otherPage/regsiter-step3.html",
+			"otherPage/register-step1-InputPhoneNumber.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/login.js",
+			"css/mui.min.css",
+			"js/deviceInfo.js",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"otherPage/register-step1.html"
+		]
+	},
+	"otherPage/mine-MyProfit.html": {
+		"resources": [
+			"css/mine-MyProfit.css"
+		],
+		"refer": [
+			"otherPage/mine-MyContributionRange.html"
+		]
+	},
+	"html/index.html": {
+		"resources": [
+			"img/bottom/mine.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"img/bottom/index-filled.png",
+			"css/mui.min.css",
+			"img/bottom/index.png",
+			"img/bottom/store.png",
+			"img/bottom/other.png",
+			"html/home/home.html",
+			"img/bottom/other-filled.png",
+			"img/bottom/mine-filled.png",
+			"img/bottom/store-filled.png"
+		],
+		"refer": [
+			"html/other/other.html",
+			"html/store/store.html",
+			"html/home/home.html",
+			"html/mine/mine.html"
+		]
+	},
+	"html/other/other.html": {
+		"resources": [
+			"css/other/other.css",
+			"icon/calculate.png",
+			"icon/calculate.png",
+			"icon/shopSettle.png",
+			"icon/incomeTutorial.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/home/home.html": {
+		"resources": [
+			"icon/scan.png",
+			"icon/income.png",
+			"icon/relax.png",
+			"icon/KTV.png",
+			"icon/KTV.png",
+			"icon/collect.png",
+			"icon/lifeServer.png",
+			"icon/healthCare.png",
+			"icon/shop.jpg",
+			"css/home/home.css",
+			"icon/all.png",
+			"icon/wedding.png",
+			"icon/bell.png",
+			"icon/education.png",
+			"css/font-awesome.min.css",
+			"icon/food.png",
+			"icon/shareRecommend.png",
+			"icon/digital.png",
+			"icon/collectChoose.png",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"icon/incomeTutorial.png",
+			"css/mui.css",
+			"icon/star_full.png",
+			"icon/star_half.png",
+			"js/home/home.js",
+			"js/lib/bluebird.core.js",
+			"js/lib/md5.js",
+			"js/lib/MD5Encrypt.js",
+			"js/mui.js",
+			"js/lib/authApi.js",
+			"js/lib/xrjAPI.js",
+			"js/require.js"
+		],
+		"refer": [
+			"html/search/search.html",
+			"html/store/store-detail.html",
+			"html/mine/mine-MyMessages.html",
+			"html/mine/mine-MyProfit.html",
+			"html/mine/mine-MyShareCode.html",
+			"html/store/store-paymentPage.html"
+		]
+	},
+	"html/mine/mine.html": {
+		"resources": [
+			"icon/refund.png",
+			"css/mine/mine.css",
+			"icon/RMB.png",
+			"icon/person.svg",
+			"icon/person.svg",
+			"icon/message.png",
+			"icon/prePayment.png",
+			"icon/paymented.png",
+			"icon/share.png",
+			"icon/comment.png",
+			"icon/noComment.png",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"icon/collect.png",
+			"js/mui.min.js",
+			"js/lib/bluebird.core.js",
+			"js/lib/authApi.js",
+			"js/lib/md5.js",
+			"js/lib/xrjAPI.js",
+			"js/lib/MD5Encrypt.js",
+			"js/mui.js",
+			"js/mine/mine.js",
+			"js/require.js"
+		],
+		"refer": [
+			"html/mine/mine-MyMessages.html",
+			"html/mine/mine-MyCollect.html",
+			"html/mine/mine-MyProfit.html",
+			"html/mine/mine-MyConsumptionBill.html",
+			"html/mine/mine-MyShareCode.html",
+			"html/mine/mine-AllBills.html"
+		]
+	},
+	"html/store/store.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/store/store.css",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"icon/collect.png",
+			"icon/nearMap.png",
+			"icon/collectChoose.png",
+			"icon/star_full.png",
+			"js/store/store.js",
+			"js/lib/bluebird.core.js",
+			"js/lib/authApi.js",
+			"js/lib/xrjAPI.js",
+			"js/lib/MD5Encrypt.js",
+			"js/mui.js",
+			"js/lib/md5.js",
+			"js/require.js"
+		],
+		"refer": [
+			"html/store/store-paymentPage.html"
+		]
+	},
+	"html/register/register-step1.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/register/register-step1.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"icon/arrow.png",
+			"icon/bg_number_g.png",
+			"icon/sweepCode.jpg",
+			"icon/bg_number_orange.png",
+			"css/register/progressbarTableCommon.css"
+		],
+		"refer": [
+			"html/register/register-step1-InputPhoneNumber.html",
+			"html/register/register-step1-IdentityVerification.html"
+		]
+	},
+	"html/login/login.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/login.js",
+			"css/mui.min.css",
+			"js/deviceInfo.js",
+			"js/common/deviceInfo.js",
+			"js/lib/bluebird.core.js",
+			"js/login/login.js",
+			"js/lib/authApi.js",
+			"js/lib/xrjAPI.js",
+			"js/lib/MD5Encrypt.js",
+			"js/mui.js",
+			"js/lib/md5.js",
+			"js/lib/aes.js",
+			"js/require.js",
+			"fonts/mui.ttf",
+			"css/login/login.css"
+		],
+		"refer": [
+			"html/register/register-step1.html",
+			"html/home/home.html",
+			"html/index.html"
+		]
+	},
+	"html/register/register-step1-InputPhoneNumber.html": {
+		"resources": [
+			"css/register/register-step1-inputPhoneNumber.css",
+			"js/register/register-step1-InputPhoneNumber.js"
+		],
+		"refer": [
+			"html/register/register-step1-IdentityVerification.html"
+		]
+	},
+	"html/register/regsiter-step2.html": {
+		"resources": [
+			"css/register/register-step2.css"
+		],
+		"refer": [
+			"html/register/regsiter-step3.html"
+		]
+	},
+	"html/register/register-step1-IdentityVerification.html": {
+		"resources": [
+			"css/register/register-step1-identityVerification.css",
+			"js/register/register-step1-IdentityVerification.js",
+			"icon/arrow.png",
+			"icon/bg_number_g.png",
+			"js/lib/bluebird.core.js",
+			"js/lib/authApi.js",
+			"icon/bg_number_orange.png",
+			"js/lib/xrjAPI.js",
+			"fonts/mui.ttf",
+			"js/lib/MD5Encrypt.js",
+			"css/mui.min.css",
+			"js/mui.js",
+			"js/lib/md5.js",
+			"js/require.js"
+		],
+		"refer": [
+			"html/register/regsiter-step2.html",
+			"html/register/register-step2.html"
+		]
+	},
+	"html/register/regsiter-step3.html": {
+		"resources": [
+			"css/register/register-step3.css",
+			"html/index.html"
+		],
+		"refer": [
+			"index.html",
+			"html/index.html",
+			"/html/index.html"
+		]
+	},
+	"otherPage/mine-MyCommentsPage.html": {
+		"resources": [
+			"css/mine-MyCommentsPage.css",
+			"icon/emptyStar.png",
+			"icon/back.png",
+			"icon/fullStar.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": []
+	},
+	"otherPage/mine-MyConsumptionBill.html": {
+		"refer": [
+			"otherPage/mine-MyCommentsPage.html"
+		],
+		"resources": [
+			"fonts/mui.ttf"
+		]
+	},
+	"html/search/search.html": {
+		"resources": [
+			"css/search/search.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/mine/mine-MyProfit.html": {
+		"resources": [
+			"css/mine//mine-MyProfit.css",
+			"icon/person.png",
+			"icon/xcoin.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"html/mine/mine-MyContributionRange.html"
+		]
+	},
+	"html/mine/mine-MyConsumptionBill.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/mine/mine-MyCommentsPage.html"
+		]
+	},
+	"html/mine/mine-MyCommentsPage.html": {
+		"resources": [
+			"icon/emptyStar.png",
+			"css/mine//mine-MyCommentsPage.css",
+			"icon/fullStar.png"
+		]
+	},
+	"html/store/store-detail.html": {
+		"resources": [
+			"css/store/store-detail.css",
+			"icon/mappoint_g.png",
+			"img/storePic.jpg",
+			"icon/back.png",
+			"icon/phone.png",
+			"icon/collect.png",
+			"js/mui.min.js",
+			"icon/person.svg",
+			"icon/star_full.png",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"icon/star_half.png"
+		],
+		"refer": [
+			"html/store/store-paymentPage.html"
+		]
+	},
+	"html/store/store-paymentPage.html": {
+		"resources": [
+			"icon/wechat.png",
+			"css/store/store-paymentPage.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"html/mine/mine-MyCollect.html": {
+		"resources": [
+			"css/mine/mine-MyCollect.css",
+			"js/mui.min.js",
+			"icon/star_full.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"icon/star_half.png"
+		]
+	},
+	"html/mine/mine-MyMessages.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"html/mine/mine-MyShareCode.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		]
+	},
+	"html/mine/mine-AllBills.html": {
+		"resources": [
+			"css/mine/mine-AllBills.css",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"html/mine/mine-str-ChangePassword.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"html/register/register-step2.html": {
+		"resources": [
+			"js/register/register-step2.js",
+			"css/register/register-step2.css",
+			"icon/arrow.png",
+			"icon/bg_number_g.png",
+			"js/lib/bluebird.core.js",
+			"js/lib/authApi.js",
+			"icon/bg_number_orange.png",
+			"js/lib/xrjAPI.js",
+			"fonts/mui.ttf",
+			"js/lib/MD5Encrypt.js",
+			"css/mui.min.css",
+			"js/mui.js",
+			"js/lib/md5.js",
+			"js/require.js"
+		],
+		"refer": [
+			"html/register/register-step3.html"
+		]
+	},
+	"html/register/register-step3.html": {
+		"resources": [
+			"js/register/register-step3.js",
+			"css/register/register-step3.css",
+			"js/lib/aes.js"
+		]
+	}
+}

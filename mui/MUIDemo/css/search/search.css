@@ -1,0 +1,68 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*global*/
+body{
+	font-family: "微软雅黑";
+	color: #777777;
+}
+/*nav*/
+.mui-bar-nav {
+    background-color: white;
+    width: 100%;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    color: #6A6A6A;
+}
+}
+#nav {
+	width: 100%;
+	background-color:white;
+	position: relative;
+	height: 54px;
+}
+
+#nav-icon-location {
+	display: block;
+	/*width: 30px;*/
+	height: 20px;
+	color: white;
+	position: absolute;
+	left: 14px;
+	top: 16px;
+	font-size: 18px;
+}
+
+#nav-search {
+    position: absolute;
+    width: 73%;
+    left: 10%;
+    top: 3px;
+}
+#nav-search-btn {
+	position: absolute;
+	right:10px;
+	top: 11px;
+}
+.mui-search input[type=search] {
+    padding-left: 30px;
+    border-radius: 40px;
+}
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit] {
+    border: 1px solid white;
+}
+#nav .mui-btn {
+    position: inherit;
+    margin-top: -7px;
+    color: #777;
+    font-size: 18px;
+}
+.mui-bar .mui-btn {
+    font-weight: 400;
+    position: relative;
+    z-index: 20;
+    top: 7px;
+    margin-top: 0;
+    padding: 6px 4px;
+}

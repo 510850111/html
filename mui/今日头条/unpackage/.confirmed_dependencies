@@ -1,0 +1,31 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"index.css",
+			"css/hui.css",
+			"imgs/logo/logo.png",
+			"js/hui.js",
+			"fonts/iconfont.ttf",
+			"fonts/iconfont.woff",
+			"html/sub1/sub1.html",
+			"index.js"
+		],
+		"refer": [
+			"html/sub1/sub1.html",
+			"sub1.html"
+		]
+	},
+	"html/sub1/sub1.html": {
+		"resources": [
+			"js/hui.js",
+			"css/hui.css",
+			"imgs/logo/logo.png",
+			"css/mui.min.css",
+			"html/sub1/sub1.css",
+			"html/sub1/sub1.js",
+			"js/mui.min.js"
+		]
+	}
+}

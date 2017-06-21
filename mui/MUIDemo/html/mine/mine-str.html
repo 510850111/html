@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/mine//mine-str.css" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人资料</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li id="headImgLi" class="mui-table-view-cell mui-media mine-str-HeadPortrait-li">
+					<a href="javascript:;">
+						<img id="headImg" class="mui-media-object mui-pull-right" src="../../icon/person.svg">
+						<div class="mui-media-body mine-str-HeadPortrait-body">
+							<div id="HeadPortrait" class="mine-str-HeadPortrait">
+								头像
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-body">
+							<div class="mine-str-nickname" id="mine-str-nickname">
+								<div class="mine-str-nickname-title">
+									昵称
+									<div class="mui-pull-right mine-str-nickname-body">
+										被风吹过的夏天
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li id="changePasswordLi" class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<!--<img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">-->
+						<div class="mui-media-body">
+							<div class="mine-str-changgePasswd-title">
+								修改密码
+								<div class="mui-pull-right mine-str-Passwd-body">
+									强度中等>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="changeHeadImage" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a id="changeHeadImageFromGallery" >从相册选择新头像</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="changeHeadImageFromCamera" >拍照选择新头像</a>
+				</li>
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#changeHeadImage"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/require.js" ></script>
+		<script type="text/javascript" src="../../js/mine/mine-str.js" ></script>
+	</body>
+
+</html>

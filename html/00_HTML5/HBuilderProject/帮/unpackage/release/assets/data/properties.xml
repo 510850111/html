@@ -1,0 +1,9 @@
+<properties>
+	<features>
+		<feature name="Cache" value="io.dcloud.feature.pdr.CoreCacheFeatureImpl"></feature><feature name="Console" value="io.dcloud.feature.pdr.LoggerFeatureImpl"></feature><feature name="NativeUI" value="io.dcloud.feature.ui.nativeui.NativeUIFeatureImpl"></feature><feature name="Navigator" value="io.dcloud.feature.ui.navigator.NavigatorUIFeatureImpl"></feature><feature name="Runtime" value="io.dcloud.feature.pdr.RuntimeFeatureImpl"></feature><feature name="NativeObj" value="io.dcloud.feature.nativeObj.FeatureImpl"></feature><feature name="Invocation" value="io.dcloud.invocation.Invocation"></feature><feature name="File" value="io.dcloud.js.file.FileFeatureImpl"></feature><feature name="UI" value="io.dcloud.feature.ui.UIFeatureImpl"><module name="Navigator" value="io.dcloud.feature.ui.NavView"/></feature><feature name="Device" value="io.dcloud.feature.device.DeviceFeatureImpl"></feature>
+	</features>	
+
+	<services>
+		
+	</services>
+</properties>

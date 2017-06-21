@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/search/search.css" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav" id="nav">
+			<a href="../../index.html"><span id="back" class="mui-action-back mui-icon mui-icon-back"></span></a>
+			<div class="mui-input-row mui-search" id="nav-search">
+				<div class="mui-input-clear mui-input-row mui-search">
+					<input id="search" type="search" placeholder="蜀九香火锅">
+				</div>
+			</div>
+			<button class="mui-btn" id="nav-search-btn">
+					搜索
+				</button>
+		</header>
+
+		<div class="mui-content">
+			<p style="margin-top: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;历史搜索</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>火锅
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>川椒牛肉面
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>火上芭蕾海鲜自助烤肉
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>Magic Dance麦吉爵士舞馆
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>海盗船海鲜大咖
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>弥远书吧
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<span id="" class="mui-icon mui-icon-search">&nbsp;</span>贡品粥
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a id="delHistoryLogs" class="" style="text-align: center;">
+						清除历史记录
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			mui.plusReady(function() {
+				//搜索框自动获得焦点
+				var search = document.getElementById("search");
+				search.focus();
+				
+				//点击清除历史记录
+				var delHistoryLogs = document.getElementById("delHistoryLogs");
+				delHistoryLogs.addEventListener('tap', function() {
+					mui.confirm(
+						"清除历史记录"
+					);
+				});
+			})
+		</script>
+	</body>
+
+</html>
