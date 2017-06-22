@@ -1,10 +1,10 @@
-//用于循环滚动背景
+﻿//用于循环滚动背景
 var BackGround = (function (_super) {
     var BackGroundImageXLength = 439;
     var BackGroundImageYLength = 780;
 
     function BackGround() {
-        
+         
         BackGround.super(this);
         //创建背景1
         this.bg1 = new Laya.Sprite();
