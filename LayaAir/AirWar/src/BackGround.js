@@ -9,14 +9,14 @@ var BackGround = (function (_super) {
         //创建背景1
         this.bg1 = new Laya.Sprite();
         //加载并显示背景图1
-        this.bg1.loadImage("../laya/assets/war/BackGround.png");
+        this.bg1.loadImage("war/BackGround.png");
         //将背景1放在容器中
         this.addChild(this.bg1);
 
         //创建背景2
         this.bg2 = new Laya.Sprite();
         //加载并显示背景图2
-        this.bg2.loadImage("../laya/assets/war/BackGround.png");
+        this.bg2.loadImage("war/BackGround.png");
         //改变背景2的坐标位置
         this.bg2.pos(0,-BackGroundImageYLength);
         //将背景1放在容器中
