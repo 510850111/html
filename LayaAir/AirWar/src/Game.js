@@ -20,5 +20,11 @@
         this.hero.pos(BackGroundImageXLength/3,(BackGroundImageYLength/3)*2);
         //把它添加到舞台上
         Laya.stage.addChild(this.hero);
+        //监听舞台的鼠标移动时间
+        Laya.stage.on(Laya.Event.MOUSE_MOVE,this,onMouseMove);
+    }
+    function onMouseMove(){
+        //设置保持主角的位置和鼠标一致
+        this.hero.pos(Laya.stage.mouseX-50,Laya.stage.mouseY);
     }
 })();
