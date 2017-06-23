@@ -10,6 +10,7 @@ var Role = (function (_super) {
     //注册Eole类
     Laya.class(Role, "Role", _super);
     var _proto = Role.prototype;//拿到Role的原型
+    
     //实现Role的init方法
     _proto.init = function (_type,_camp,_hp,_speed,_hitRadius) {
 
@@ -40,7 +41,7 @@ var Role = (function (_super) {
             //缓存飞机的动作
             Laya.Animation.createFrames(["war/hero1.png","war/hero2.png"], "hero_fly");
             //缓存击中的爆炸效果
-            Laya.Animation.createFrames(["war/hero_blowup_n1.png", "war/hero_blowup_n2.png", "war/hero_blowup_n3.png","war/hero_blowup_n4.png"], "hero_blowup");
+            Laya.Animation.createFrames(["war/hero_blowup_n1.png", "war/hero_blowup_n2.png", "war/hero_blowup_n3.png","war/hero_blowup_n4.png"], "hero_down");
             
             //缓存敌机1的飞行动作
             Laya.Animation.createFrames(["war/enemy1.png"],"enemy1_fly");
@@ -63,6 +64,8 @@ var Role = (function (_super) {
 
             //缓存子弹的飞行动作
             Laya.Animation.createFrames(["war/bullet1.png"],"bullet1_fly");
+            //缓存子弹的爆炸动作
+            Laya.Animation.createFrames(["war/enemy1_down4.png"],"bullet1_down");
 
         }
         
