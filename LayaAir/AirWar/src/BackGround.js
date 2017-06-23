@@ -1,7 +1,7 @@
 ﻿//用于循环滚动背景
 var BackGround = (function (_super) {
-    var BackGroundImageXLength = 439;
-    var BackGroundImageYLength = 780;
+    var BackGroundImageXLength = 450;
+    var BackGroundImageYLength = 852;
 
     function BackGround() {
          
