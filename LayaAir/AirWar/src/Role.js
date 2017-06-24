@@ -13,7 +13,7 @@ var Role = (function (_super) {
 
     //实现Role的init方法
     _proto.init = function (_type, _camp, _hp, _speed, _hitRadius,_heroType) {
-
+        if(!_heroType){_heroType = 0};
         //角色的类型
         this.type = _type;
         //敌我阵营
@@ -83,9 +83,11 @@ var Role = (function (_super) {
             Laya.Animation.createFrames(["war/ufo1.png"], "ufo1_fly");
             //缓存强化包被击动作
             Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo1_hit");
+            Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo1_down");
             //缓存医疗包资源
             Laya.Animation.createFrames(["war/ufo2.png"], "ufo2_fly");
             Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo2_hit");
+            Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo2_down");
 
 
 
