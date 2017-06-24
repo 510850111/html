@@ -37,7 +37,7 @@ var Role = (function (_super) {
         //射击类型
         this.shootType = 0;
         //射击间隔
-        this.shootInterval = 500;
+        this.shootInterval = 350;
         //下次射击时间
         this.shootTime = Laya.Browser.now() + 2000;
         //当前动作
@@ -53,7 +53,8 @@ var Role = (function (_super) {
             Laya.Animation.createFrames(["war/hero1.png", "war/hero2.png"], "hero_fly");
             //缓存击中的爆炸效果
             Laya.Animation.createFrames(["war/hero_blowup_n1.png", "war/hero_blowup_n2.png", "war/hero_blowup_n3.png", "war/hero_blowup_n4.png"], "hero_down");
-
+            //缓存被击中而未被击毁的动作
+            Laya.Animation.createFrames(["war/hero_blowup_n1.png"], "hero_hit");
             //缓存敌机1的飞行动作
             Laya.Animation.createFrames(["war/enemy1.png"], "enemy1_fly");
             //缓存敌机1的爆炸动作
@@ -80,8 +81,13 @@ var Role = (function (_super) {
 
             //缓存强化包资源
             Laya.Animation.createFrames(["war/ufo1.png"], "ufo1_fly");
+            //缓存强化包被击动作
+            Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo1_hit");
             //缓存医疗包资源
             Laya.Animation.createFrames(["war/ufo2.png"], "ufo2_fly");
+            Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo2_hit");
+
+
 
         }
 
