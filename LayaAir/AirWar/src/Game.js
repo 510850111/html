@@ -94,14 +94,14 @@ function onLoop() {
                     //初始化子弹信息
                     bullet.init("bullet1", role.comp, 1, (-4 - role.shootType - Math.floor(this.level / 15)), 1, 1);
                     //设置角色类型为子弹类型
-                    blur.isBullet = true;
+                    role.isBullet = true;
                     //设置子弹起始位置
                     bullet.pos(role.x + pos[index] + 46, role.y - role.hitRadius - 40);
                     //添加到舞台上
                     this.roleBox.addChild(bullet);
                 }
                 //添加发射子弹音效
-                Laya.SoundManager.playSound("res/sound/bullet.mp3",1);
+                Laya.SoundManager.playSound("res/sound/bullet.wav",1);
             }
         }
     }
@@ -156,7 +156,7 @@ function onLoop() {
     //如果主角死亡,则停止游戏循环
     if (this.hero.hp < 1) {
         //添加音效
-        Laya.SoundManager.playMusic("res/sound/game_over.mp3",1);
+        Laya.SoundManager.playMusic("res/sound/game_over.wav",1);
         Laya.timer.clear(this, onLoop);
         //显示提示信息
         this.gameInfo.infoLable.text = "游戏结束!\n您的分数:" + this.score + "\n您的等级:" + this.level + "\n点击这里重新开始.";
@@ -187,7 +187,7 @@ function onLoop() {
     if (Laya.timer.currFrame % (900 - cutTime) === 0) { 
         createEnemy(2, 1, 1 + speedUp, 10 + hpUp * 6);
         //BOSS出场怎么能没有点BGM呢?
-        Laya.SoundManager.playMusic("res/sound/big_spaceship_flying.mp3");
+        Laya.SoundManager.playMusic("res/sound/big_spaceship_flying.wav");
      }
 
 }
@@ -210,7 +210,7 @@ function lostHP(role, hp) {
         if (this.hero.shootInterval <= 150) { this.hero.shootInterval = 150 }
         //吃到后隐藏道具,并播放声音
         role.visible = false;
-        Laya.SoundManager.playMusic("res/sound/get_bomb.mp3",1);
+        Laya.SoundManager.playMusic("res/sound/get_bomb.wav",1);
         
     } else if (role.heroType === 3) {
         //一个血瓶使得血量+1
@@ -221,7 +221,7 @@ function lostHP(role, hp) {
         if (this.hero.hp > 10) this.hero.hp = 10;
         //吃到后隐藏道具并播放声音
         role.visible = false;
-        Laya.SoundManager.playMusic("res/sound/get_double_laser.mp3",1);
+        Laya.SoundManager.playMusic("res/sound/get_double_laser.wav",1);
     }
     if (role.hp > 0) {
         //如果未死亡,则播放被击中的动画
@@ -233,7 +233,7 @@ function lostHP(role, hp) {
         } else {
             if(role.type != "hero"){
                 //播放爆炸的声音
-                Laya.SoundManager.playSound("res/sound/" + role.type + "_down.mp3",1);
+                Laya.SoundManager.playSound("res/sound/" + role.type + "_down.wav",1);
             }
             //如果死亡,则播放死亡动画
             role.playAction("down");
