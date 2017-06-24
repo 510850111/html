@@ -22,6 +22,9 @@ var BackGround = (function (_super) {
         //将背景1放在容器中
         this.addChild(this.bg2);
 
+        //添加背景声音
+        Laya.SoundManager.playMusic("res/sound/game_music.mp3",0);
+
         //给容器添加帧循环
         Laya.timer.frameLoop(1,this,this.onLoop);
     }

@@ -22,6 +22,9 @@ this.hitRadius = [30, 50, 120];
 
 //初始化窗口大小为背景图的大小490*852,激活webGL渲染
 Laya.init(BackGroundImageXLength, BackGroundImageYLength, Laya.WebGL);
+Laya.stage.scaleMode = "showall";
+Laya.stage.alignH = "center";
+Laya.stage.screenMode = "vertical";
 //加载图集资源
 Laya.loader.load("res/atlas/war.json", Laya.Handler.create(this, onLoaded), null, Laya.Loader.ATLAS);
 
@@ -97,8 +100,8 @@ function onLoop() {
                     //添加到舞台上
                     this.roleBox.addChild(bullet);
                 }
-
-
+                //添加发射子弹音效
+                Laya.SoundManager.playSound("res/sound/bullet.mp3",1);
             }
         }
     }
@@ -152,11 +155,14 @@ function onLoop() {
     }
     //如果主角死亡,则停止游戏循环
     if (this.hero.hp < 1) {
+        //添加音效
+        Laya.SoundManager.playMusic("res/sound/game_over.mp3",1);
         Laya.timer.clear(this, onLoop);
         //显示提示信息
         this.gameInfo.infoLable.text = "游戏结束!\n您的分数:" + this.score + "\n您的等级:" + this.level + "\n点击这里重新开始.";
         //注册这个ui界面的点击事件
         this.gameInfo.infoLable.once(Laya.Event.CLICK, this, restartGame);
+
 
     }
 
@@ -178,7 +184,11 @@ function onLoop() {
     //生成中型飞机
     if (Laya.timer.currFrame % (150 - cutTime) === 0) { createEnemy(1, 1 + numUp, 2 + speedUp, 2 + hpUp * 2) }
     //生成大飞机(BOSS)
-    if (Laya.timer.currFrame % (900 - cutTime) === 0) { createEnemy(2, 1, 1 + speedUp, 10 + hpUp * 6) }
+    if (Laya.timer.currFrame % (900 - cutTime) === 0) { 
+        createEnemy(2, 1, 1 + speedUp, 10 + hpUp * 6);
+        //BOSS出场怎么能没有点BGM呢?
+        Laya.SoundManager.playMusic("res/sound/big_spaceship_flying.mp3");
+     }
 
 }
 
@@ -198,8 +208,10 @@ function lostHP(role, hp) {
         this.hero.shootInterval = 350 - 20 * (this.bulletLevel > 20 ? 20 : this.bulletLevel);
         //子弹最高速度为150
         if (this.hero.shootInterval <= 150) { this.hero.shootInterval = 150 }
-        //吃到后隐藏道具
+        //吃到后隐藏道具,并播放声音
         role.visible = false;
+        Laya.SoundManager.playMusic("res/sound/get_bomb.mp3",1);
+        
     } else if (role.heroType === 3) {
         //一个血瓶使得血量+1
         this.hero.hp++;
@@ -207,17 +219,22 @@ function lostHP(role, hp) {
         this.gameInfo.hp(this.hero.hp);
         //最大血量不超过十
         if (this.hero.hp > 10) this.hero.hp = 10;
-        //吃到后隐藏道具
+        //吃到后隐藏道具并播放声音
         role.visible = false;
+        Laya.SoundManager.playMusic("res/sound/get_double_laser.mp3",1);
     }
     if (role.hp > 0) {
         //如果未死亡,则播放被击中的动画
         role.playAction("hit");
     } else {
-        if (role.isBullet) {
+        if (role.heroType > 0) {
             //如果是子弹,则直接隐藏
             role.visible = false;
         } else {
+            if(role.type != "hero"){
+                //播放爆炸的声音
+                Laya.SoundManager.playSound("res/sound/" + role.type + "_down.mp3",1);
+            }
             //如果死亡,则播放死亡动画
             role.playAction("down");
             //击毁boss掉落血瓶或子弹升级道具
@@ -323,7 +340,7 @@ function pauseGame() {
     Laya.stage.off(Laya.Event.onMouseMove, this, onMouseMove);
     //停止游戏的主循环
     Laya.timer.clear(this, onLoop);
-    
+
 }
 /**
  * 恢复游戏

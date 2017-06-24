@@ -81,7 +81,6 @@ var Role = (function (_super) {
 
             //缓存强化包资源
             Laya.Animation.createFrames(["war/ufo1.png"], "ufo1_fly");
-            //缓存强化包被击动作
             Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo1_hit");
             Laya.Animation.createFrames(["war/enemy1_down4.png"], "ufo1_down");
             //缓存医疗包资源
