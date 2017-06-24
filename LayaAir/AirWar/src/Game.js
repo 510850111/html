@@ -10,12 +10,12 @@ var Game = (function () {
         //积分成绩
         this.score = 0;
         //升级等级所需成绩
-        this.levelUpScore = 0;
+        this.levelUpScore = 20;
         //子弹级别
         this.bulletLevel = 0;
 
         //敌机血量
-        this.hps = [1, 2, 5];//因为有三种敌机,所以有三个不同血量
+        this.hps = [1, 3, 8];//因为有三种敌机,所以有三个不同血量
         //敌机速度
         this.speed = [2.5, 2, 1];//敌机大小越小,速度越快
         //敌机被击半径
@@ -129,6 +129,16 @@ var Game = (function () {
                             //碰撞后掉血
                             lostHP(role1, 1);
                             lostHP(role2, 1);
+
+                            //积分的增加,每掉一滴血,积分+1
+                            this.score++;
+                            //积分大于升级所需积分,则升级
+                            if (this.score > this.levelUpScore) {
+                                //升级关卡
+                                this.level++;
+                                //提高下一级的难度
+                                this.levelUpScore += this.levelUpScore * 5;
+                            }
                         }
 
                     }
@@ -142,10 +152,32 @@ var Game = (function () {
             Laya.timer.clear(this, onLoop);
         }
 
-        //每隔30帧创建新的敌机
-        if (Laya.timer.currFrame % 60 === 0) {
-            createEnemy(2);
-        }
+        // //每隔30帧创建新的敌机
+        // if (Laya.timer.currFrame % 60 === 0) {
+        //     createEnemy(2);
+        // }
+
+        /*
+         *
+         *   根据等级创建敌机
+         * 
+         */
+
+        //关卡越高,创建敌机时间越短
+        var cutTime = this.level < 30 ? this.level * 2 : 60;
+        //关卡越高,敌机飞行速度越快
+        var speedUp = Math.floor(this.level / 20);
+        //关卡越高,血量越大
+        var hpUp = Math.floor(this.level / 10) + (this.bulletLevel / 2) + 1;
+        //关卡越高,数量越多
+        var numUp = Math.floor(this.level / 20);
+
+        //生成小飞机
+        if (Laya.timer.currFrame % (80 - cutTime) === 0) { createEnemy(0, 2 + numUp, 3 + speedUp, 1) }
+        //生成中型飞机
+        if (Laya.timer.currFrame % (150 - cutTime) === 0) { createEnemy(1, 1 + numUp, 2 + speedUp, 2 + hpUp * 2) }
+        //生成大飞机(BOSS)
+        if (Laya.timer.currFrame % (900 - cutTime) === 0) { createEnemy(2, 1, 1 + speedUp, 10 + hpUp * 6) }
 
     }
 
@@ -162,7 +194,9 @@ var Game = (function () {
             //子弹每升2级,子弹数量+1,最高为4
             this.hero.shootType = Math.min(Math.floor(this.bulletLevel / 2) + 1, 4);
             //子弹级别越高,发射频率越快
-            this.hero.shootInterval = 500 - 20 * (this.bulletLevel > 20 ? 20 : this.bulletLevel);
+            this.hero.shootInterval = 350 - 20 * (this.bulletLevel > 20 ? 20 : this.bulletLevel);
+            //子弹最高速度为150
+            if (this.hero.shootInterval <= 150) { this.hero.shootInterval = 150 }
             //吃到后隐藏道具
             role.visible = false;
         } else if (role.heroType === 3) {
@@ -206,30 +240,34 @@ var Game = (function () {
      */
     function onMouseMove() {
         //设置保持主角的位置和鼠标一致
-        this.hero.pos(Laya.stage.mouseX -50, Laya.stage.mouseY);
+        this.hero.pos(Laya.stage.mouseX - 50, Laya.stage.mouseY);
     }
 
 
     /**
      * 从对象池中创建敌人
+     * @param type 敌机类型(0-小飞机,1-中飞机,2-大飞机(BOSS))
      * @param num 创建num个敌人
+     * @param speed 敌机速度
+     * @param hp 敌机血量
      */
-    function createEnemy(num) {
+    function createEnemy(type, num, speed, hp) {
         //创建num个敌人
         for (var i = 0; i < num; i++) {
-            //随机出现敌人
-            var r = Math.random();
-            //根据随机数随机敌人
-            var type = (r < 0.7) ? 0 : ((r < 0.95) ? 1 : 2);
             //创建敌人
-            // var enemy = new Role();
             var enemy = Laya.Pool.getItemByClass("role", Role);//从对象池中获取敌人,以减少对象的创建
             //初始化敌人
-            enemy.init("enemy" + (type + 1), 1, this.hps[type], this.speed[type], this.hitRadius[type]);
+            enemy.init("enemy" + (type + 1), 1, hp, speed, this.hitRadius[type]);
             //随机位置
             enemy.pos(Math.random() * 400 + 40, -100);
             //添加到舞台
             Laya.stage.addChild(enemy);
         };
+        // //如果积分足够,那么子弹数量++;
+        // if (this.score > this.levelUpScore) {
+        //     this.bulletLevel++;
+        //     this.hero.shootType = Math.min(Math.floor(this.bulletLevel / 2) + 1, 4);
+        //     this.hero.shootInterval = 200 - 20 * (this.bulletLevel > 20 ? 20 : this.bulletLevel);
+        // }
     }
 })();
